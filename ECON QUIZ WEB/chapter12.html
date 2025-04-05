@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 12 - Full Model with UIP</title>
+  <style>
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .banner {
+      text-align: center;
+      background-color: #f0f0f0;
+      padding: 10px;
+      border-bottom: 2px solid #ccc;
+      margin-bottom: 20px;
+    }
+    .banner h2 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+    .banner p {
+      margin: 5px 0 0 0;
+      font-size: 0.9em;
+      color: #555;
+    }
+    nav {
+      margin-bottom: 20px;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+    }
+    nav ul li {
+      display: inline;
+      margin-right: 10px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #007BFF;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    .question {
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    .question p {
+      margin: 0 0 5px 0;
+    }
+    .result {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .correct {
+      color: green;
+    }
+    .incorrect {
+      color: red;
+    }
+    button {
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header class="banner">
+    <h2>ECO 102 Practise Quiz</h2>
+    <p>Teng</p>
+  </header>
+  
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="chapter1.html">Chapter 1</a></li>
+      <li><a href="chapter2.html">Chapter 2</a></li>
+      <li><a href="chapter3.html">Chapter 3</a></li>
+      <li><a href="chapter4.html">Chapter 4</a></li>
+      <li><a href="chapter5.html">Chapter 5</a></li>
+      <li><a href="chapter6.html">Chapter 6</a></li>
+      <li><a href="chapter7.html">Chapter 7</a></li>
+      <li><a href="chapter8.html">Chapter 8</a></li>
+      <li><a href="chapter9.html">Chapter 9</a></li>
+      <li><a href="chapter10.html">Chapter 10</a></li>
+      <li><a href="chapter11.html">Chapter 11</a></li>
+      <li><a href="chapter12.html">Chapter 12</a></li>
+    </ul>
+  </nav>
+  
+  <h1>Chapter 12 - Full Model with UIP</h1>
+  <form id="quizForm">
+    <!-- Q1 -->
+    <div class="question">
+      <p>1. In the Full Model with UIP, which three curves are integrated?</p>
+      <input type="radio" name="q1" value="A" id="q1a1">
+      <label for="q1a1">A. IS, LM, and AD curves</label><br>
+      <input type="radio" name="q1" value="B" id="q1a2">
+      <label for="q1a2">B. IS, MP, and Phillips Curve (PC)</label><br>
+      <input type="radio" name="q1" value="C" id="q1a3">
+      <label for="q1a3">C. LM, BP, and PC curves</label><br>
+      <input type="radio" name="q1" value="D" id="q1a4">
+      <label for="q1a4">D. AD, AS, and LM curves</label><br>
+      <button type="button" onclick="checkAnswer(1, 'B', 'IS, MP, and Phillips Curve (PC)')">Check</button>
+      <div id="result-q1" class="result"></div>
+    </div>
+    
+    <!-- Q2 -->
+    <div class="question">
+      <p>2. Uncovered Interest Parity (UIP) is incorporated in the Full Model primarily to capture the effect of:</p>
+      <input type="radio" name="q2" value="A" id="q2a1">
+      <label for="q2a1">A. Fiscal policy on output</label><br>
+      <input type="radio" name="q2" value="B" id="q2a2">
+      <label for="q2a2">B. Exchange rate expectations and foreign monetary conditions</label><br>
+      <input type="radio" name="q2" value="C" id="q2a3">
+      <label for="q2a3">C. The labor market dynamics</label><br>
+      <input type="radio" name="q2" value="D" id="q2a4">
+      <label for="q2a4">D. Government spending multipliers</label><br>
+      <button type="button" onclick="checkAnswer(2, 'B', 'Exchange rate expectations and foreign monetary conditions')">Check</button>
+      <div id="result-q2" class="result"></div>
+    </div>
+    
+    <!-- Q3 -->
+    <div class="question">
+      <p>3. An increase in the domestic risk‐free interest rate (r₍f₎) will directly cause the MP curve to:</p>
+      <input type="radio" name="q3" value="A" id="q3a1">
+      <label for="q3a1">A. Shift downward, lowering the real interest rate</label><br>
+      <input type="radio" name="q3" value="B" id="q3a2">
+      <label for="q3a2">B. Shift upward, raising the real interest rate at any given output gap</label><br>
+      <input type="radio" name="q3" value="C" id="q3a3">
+      <label for="q3a3">C. Shift to the right, increasing the output gap</label><br>
+      <input type="radio" name="q3" value="D" id="q3a4">
+      <label for="q3a4">D. Remain unchanged</label><br>
+      <button type="button" onclick="checkAnswer(3, 'B', 'An upward shift in the MP curve')">Check</button>
+      <div id="result-q3" class="result"></div>
+    </div>
+    
+    <!-- Q4 -->
+    <div class="question">
+      <p>4. In the context of the Full Model with UIP, when the domestic risk‐free rate increases, what is the expected impact on aggregate spending and the Phillips Curve?</p>
+      <input type="radio" name="q4" value="A" id="q4a1">
+      <label for="q4a1">A. Aggregate spending increases, shifting the PC curve up</label><br>
+      <input type="radio" name="q4" value="B" id="q4a2">
+      <label for="q4a2">B. Aggregate spending decreases, shifting the PC curve down</label><br>
+      <input type="radio" name="q4" value="C" id="q4a3">
+      <label for="q4a3">C. No change in aggregate spending, so the PC curve is unchanged</label><br>
+      <input type="radio" name="q4" value="D" id="q4a4">
+      <label for="q4a4">D. Aggregate spending increases, shifting the PC curve down</label><br>
+      <button type="button" onclick="checkAnswer(4, 'B', 'Aggregate spending decreases, shifting the PC curve down')">Check</button>
+      <div id="result-q4" class="result"></div>
+    </div>
+    
+    <!-- Q5 -->
+    <div class="question">
+      <p>5. If the domestic risk‐free rate increases, leading to an upward shift in the MP curve, the resulting equilibrium is characterized by:</p>
+      <input type="radio" name="q5" value="A" id="q5a1">
+      <label for="q5a1">A. A positive output gap, lower unemployment, and higher inflation</label><br>
+      <input type="radio" name="q5" value="B" id="q5a2">
+      <label for="q5a2">B. A recessionary (negative) output gap, higher unemployment, and lower inflation</label><br>
+      <input type="radio" name="q5" value="C" id="q5a3">
+      <label for="q5a3">C. No change in output gap but a lower inflation rate</label><br>
+      <input type="radio" name="q5" value="D" id="q5a4">
+      <label for="q5a4">D. Higher output and increased inflation</label><br>
+      <button type="button" onclick="checkAnswer(5, 'B', 'A recessionary output gap with higher unemployment and lower inflation')">Check</button>
+      <div id="result-q5" class="result"></div>
+    </div>
+    
+    <!-- Q6 -->
+    <div class="question">
+      <p>6. In the Full Model with UIP, which variable reflects the influence of foreign monetary policy and inflation expectations on the domestic economy?</p>
+      <input type="radio" name="q6" value="A" id="q6a1">
+      <label for="q6a1">A. The risk premium on domestic bonds</label><br>
+      <input type="radio" name="q6" value="B" id="q6a2">
+      <label for="q6a2">B. The foreign risk‐free rate and expected future exchange rate (Se)</label><br>
+      <input type="radio" name="q6" value="C" id="q6a3">
+      <label for="q6a3">C. Government fiscal multipliers</label><br>
+      <input type="radio" name="q6" value="D" id="q6a4">
+      <label for="q6a4">D. The labor force participation rate</label><br>
+      <button type="button" onclick="checkAnswer(6, 'B', 'The foreign risk‐free rate and expected future exchange rate (Se)')">Check</button>
+      <div id="result-q6" class="result"></div>
+    </div>
+    
+    <!-- Q7 -->
+    <div class="question">
+      <p>7. An increase in expected future exchange rates (Se) or a decrease in the foreign risk‐free rate (r*₍f₎) will, via UIP, tend to:</p>
+      <input type="radio" name="q7" value="A" id="q7a1">
+      <label for="q7a1">A. Reduce domestic spending, shifting the IS curve left</label><br>
+      <input type="radio" name="q7" value="B" id="q7a2">
+      <label for="q7a2">B. Increase domestic spending, shifting the IS curve right</label><br>
+      <input type="radio" name="q7" value="C" id="q7a3">
+      <label for="q7a3">C. Have no effect on the IS curve</label><br>
+      <input type="radio" name="q7" value="D" id="q7a4">
+      <label for="q7a4">D. Only affect the MP curve</label><br>
+      <button type="button" onclick="checkAnswer(7, 'B', 'Increase domestic spending, shifting the IS curve right')">Check</button>
+      <div id="result-q7" class="result"></div>
+    </div>
+    
+    <!-- Q8 -->
+    <div class="question">
+      <p>8. When domestic expectations improve (e.g., higher Se) or when foreign monetary conditions become more accommodative (lower r*₍f₎), the Full Model predicts that the IS curve will:</p>
+      <input type="radio" name="q8" value="A" id="q8a1">
+      <label for="q8a1">A. Shift left, resulting in a lower output gap</label><br>
+      <input type="radio" name="q8" value="B" id="q8a2">
+      <label for="q8a2">B. Shift right, leading to a higher output gap</label><br>
+      <input type="radio" name="q8" value="C" id="q8a3">
+      <label for="q8a3">C. Become vertical</label><br>
+      <input type="radio" name="q8" value="D" id="q8a4">
+      <label for="q8a4">D. Shift upward without changing the output gap</label><br>
+      <button type="button" onclick="checkAnswer(8, 'B', 'The IS curve shifts right, increasing the output gap')">Check</button>
+      <div id="result-q8" class="result"></div>
+    </div>
+    
+    <!-- Q9 -->
+    <div class="question">
+      <p>9. In the “Expectations and foreign MP” scenario of the Full Model with UIP, what happens to the Phillips Curve (PC)?</p>
+      <input type="radio" name="q9" value="A" id="q9a1">
+      <label for="q9a1">A. It shifts down, lowering inflation at every output gap</label><br>
+      <input type="radio" name="q9" value="B" id="q9a2">
+      <label for="q9a2">B. It shifts up, leading to higher inflation for a given output gap</label><br>
+      <input type="radio" name="q9" value="C" id="q9a3">
+      <label for="q9a3">C. It becomes flatter, reducing its sensitivity to output gaps</label><br>
+      <input type="radio" name="q9" value="D" id="q9a4">
+      <label for="q9a4">D. It remains unchanged</label><br>
+      <button type="button" onclick="checkAnswer(9, 'B', 'It shifts up, leading to higher inflation for a given output gap')">Check</button>
+      <div id="result-q9" class="result"></div>
+    </div>
+    
+    <!-- Q10 -->
+    <div class="question">
+      <p>10. According to the Full Model with UIP, an increase in domestic r₍f₎ will tend to cause which combination of changes?</p>
+      <input type="radio" name="q10" value="A" id="q10a1">
+      <label for="q10a1">A. Higher real interest rates, lower aggregate spending, a negative output gap, and lower inflation</label><br>
+      <input type="radio" name="q10" value="B" id="q10a2">
+      <label for="q10a2">B. Lower real interest rates, higher aggregate spending, a positive output gap, and higher inflation</label><br>
+      <input type="radio" name="q10" value="C" id="q10a3">
+      <label for="q10a3">C. Higher real interest rates with no change in spending or inflation</label><br>
+      <input type="radio" name="q10" value="D" id="q10a4">
+      <label for="q10a4">D. Lower unemployment and higher inflation with unchanged output gap</label><br>
+      <button type="button" onclick="checkAnswer(10, 'A', 'Higher real interest rates, lower spending, negative output gap, and lower inflation')">Check</button>
+      <div id="result-q10" class="result"></div>
+    </div>
+    
+    <!-- Q11 -->
+    <div class="question">
+      <p>11. The shift in the MP curve due to an increase in the domestic risk‐free rate reflects:</p>
+      <input type="radio" name="q11" value="A" id="q11a1">
+      <label for="q11a1">A. A central bank tightening monetary policy</label><br>
+      <input type="radio" name="q11" value="B" id="q11a2">
+      <label for="q11a2">B. A fiscal expansion by the government</label><br>
+      <input type="radio" name="q11" value="C" id="q11a3">
+      <label for="q11a3">C. A supply shock in the economy</label><br>
+      <input type="radio" name="q11" value="D" id="q11a4">
+      <label for="q11a4">D. A rise in inflation expectations</label><br>
+      <button type="button" onclick="checkAnswer(11, 'A', 'A tightening of monetary policy')">Check</button>
+      <div id="result-q11" class="result"></div>
+    </div>
+    
+    <!-- Q12 -->
+    <div class="question">
+      <p>12. If foreign monetary policy becomes more accommodative (i.e., a decrease in r*₍f₎) while domestic policy remains unchanged, UIP implies that the domestic economy will likely experience:</p>
+      <input type="radio" name="q12" value="A" id="q12a1">
+      <label for="q12a1">A. A leftward shift in the IS curve and lower inflation</label><br>
+      <input type="radio" name="q12" value="B" id="q12a2">
+      <label for="q12a2">B. A rightward shift in the IS curve and an upward shift in the PC curve (higher inflation)</label><br>
+      <input type="radio" name="q12" value="C" id="q12a3">
+      <label for="q12a3">C. No change in the IS or PC curves</label><br>
+      <input type="radio" name="q12" value="D" id="q12a4">
+      <label for="q12a4">D. A downward shift in the MP curve</label><br>
+      <button type="button" onclick="checkAnswer(12, 'B', 'Rightward shift in IS and upward shift in PC')">Check</button>
+      <div id="result-q12" class="result"></div>
+    </div>
+    
+    <!-- Q13 -->
+    <div class="question">
+      <p>13. In the Full Model with UIP, the term “output gap” is defined as:</p>
+      <input type="radio" name="q13" value="A" id="q13a1">
+      <label for="q13a1">A. The difference between actual output and potential output</label><br>
+      <input type="radio" name="q13" value="B" id="q13a2">
+      <label for="q13a2">B. The ratio of government spending to GDP</label><br>
+      <input type="radio" name="q13" value="C" id="q13a3">
+      <label for="q13a3">C. The difference between nominal and real GDP</label><br>
+      <input type="radio" name="q13" value="D" id="q13a4">
+      <label for="q13a4">D. The gap between exports and imports</label><br>
+      <button type="button" onclick="checkAnswer(13, 'A', 'The difference between actual and potential output')">Check</button>
+      <div id="result-q13" class="result"></div>
+    </div>
+    
+    <!-- Q14 -->
+    <div class="question">
+      <p>14. In the Full Model, if both a financial shock (increasing r₍f₎) and a foreign policy shock (decrease in r*₍f₎) occur simultaneously, the net effect on the domestic MP curve depends on:</p>
+      <input type="radio" name="q14" value="A" id="q14a1">
+      <label for="q14a1">A. The relative magnitude of the domestic and foreign interest rate changes</label><br>
+      <input type="radio" name="q14" value="B" id="q14a2">
+      <label for="q14a2">B. The level of government spending</label><br>
+      <input type="radio" name="q14" value="C" id="q14a3">
+      <label for="q14a3">C. Changes in the labor force participation rate</label><br>
+      <input type="radio" name="q14" value="D" id="q14a4">
+      <label for="q14a4">D. The slope of the IS curve</label><br>
+      <button type="button" onclick="checkAnswer(14, 'A', 'Depends on the relative magnitude of domestic and foreign rate changes')">Check</button>
+      <div id="result-q14" class="result"></div>
+    </div>
+    
+    <!-- Q15 -->
+    <div class="question">
+      <p>15. An upward shift in the MP curve will cause which of the following movements along the IS curve?</p>
+      <input type="radio" name="q15" value="A" id="q15a1">
+      <label for="q15a1">A. A movement to a higher output gap with lower inflation</label><br>
+      <input type="radio" name="q15" value="B" id="q15a2">
+      <label for="q15a2">B. A movement to a lower output gap with higher unemployment and lower inflation</label><br>
+      <input type="radio" name="q15" value="C" id="q15a3">
+      <label for="q15a3">C. No movement along the IS curve</label><br>
+      <input type="radio" name="q15" value="D" id="q15a4">
+      <label for="q15a4">D. A parallel shift of the IS curve</label><br>
+      <button type="button" onclick="checkAnswer(15, 'B', 'Movement to a lower output gap with higher unemployment and lower inflation')">Check</button>
+      <div id="result-q15" class="result"></div>
+    </div>
+    
+    <!-- Q16 -->
+    <div class="question">
+      <p>16. In the Full Model with UIP, an increase in foreign inflation expectations that raises Se will likely result in:</p>
+      <input type="radio" name="q16" value="A" id="q16a1">
+      <label for="q16a1">A. A downward shift in the MP curve</label><br>
+      <input type="radio" name="q16" value="B" id="q16a2">
+      <label for="q16a2">B. A rightward shift in the IS curve and an upward shift in the Phillips Curve</label><br>
+      <input type="radio" name="q16" value="C" id="q16a3">
+      <label for="q16a3">C. A leftward shift in the IS curve and a lower output gap</label><br>
+      <input type="radio" name="q16" value="D" id="q16a4">
+      <label for="q16a4">D. A downward shift in the Phillips Curve</label><br>
+      <button type="button" onclick="checkAnswer(16, 'B', 'Rightward shift in IS and upward shift in PC')">Check</button>
+      <div id="result-q16" class="result"></div>
+    </div>
+    
+    <!-- Q17 -->
+    <div class="question">
+      <p>17. When the IS curve shifts right due to an increase in autonomous spending (or improved expectations via UIP), the expected effects are:</p>
+      <input type="radio" name="q17" value="A" id="q17a1">
+      <label for="q17a1">A. Higher output, lower unemployment, and higher inflation</label><br>
+      <input type="radio" name="q17" value="B" id="q17a2">
+      <label for="q17a2">B. Lower output, higher unemployment, and lower inflation</label><br>
+      <input type="radio" name="q17" value="C" id="q17a3">
+      <label for="q17a3">C. Unchanged output but higher inflation</label><br>
+      <input type="radio" name="q17" value="D" id="q17a4">
+      <label for="q17a4">D. A higher risk premium with no output change</label><br>
+      <button type="button" onclick="checkAnswer(17, 'A', 'Higher output, lower unemployment, and higher inflation')">Check</button>
+      <div id="result-q17" class="result"></div>
+    </div>
+    
+    <!-- Q18 -->
+    <div class="question">
+      <p>18. The integration of UIP into the Full Model allows us to understand the impact of:</p>
+      <input type="radio" name="q18" value="A" id="q18a1">
+      <label for="q18a1">A. Domestic fiscal policy alone on the output gap</label><br>
+      <input type="radio" name="q18" value="B" id="q18a2">
+      <label for="q18a2">B. Exchange rate expectations and foreign interest rates on domestic aggregate demand and inflation</label><br>
+      <input type="radio" name="q18" value="C" id="q18a3">
+      <label for="q18a3">C. Only the domestic labor market on inflation</label><br>
+      <input type="radio" name="q18" value="D" id="q18a4">
+      <label for="q18a4">D. Only cost-push factors on the Phillips Curve</label><br>
+      <button type="button" onclick="checkAnswer(18, 'B', 'Exchange rate expectations and foreign rates affect domestic demand and inflation')">Check</button>
+      <div id="result-q18" class="result"></div>
+    </div>
+    
+    <!-- Q19 -->
+    <div class="question">
+      <p>19. Which of the following best describes a “recessionary gap” in the context of the Full Model with UIP?</p>
+      <input type="radio" name="q19" value="A" id="q19a1">
+      <label for="q19a1">A. When actual output is above potential output</label><br>
+      <input type="radio" name="q19" value="B" id="q19a2">
+      <label for="q19a2">B. When actual output is below potential output, typically accompanied by low inflation and higher unemployment</label><br>
+      <input type="radio" name="q19" value="C" id="q19a3">
+      <label for="q19a3">C. When inflation exceeds expectations due to demand-pull factors</label><br>
+      <input type="radio" name="q19" value="D" id="q19a4">
+      <label for="q19a4">D. When monetary policy is too accommodative</label><br>
+      <button type="button" onclick="checkAnswer(19, 'B', 'Actual output is below potential output')">Check</button>
+      <div id="result-q19" class="result"></div>
+    </div>
+    
+    <!-- Q20 -->
+    <div class="question">
+      <p>20. Overall, the Full Model with UIP is useful for policy analysis because it:</p>
+      <input type="radio" name="q20" value="A" id="q20a1">
+      <label for="q20a1">A. Is solely focused on fiscal policy responses</label><br>
+      <input type="radio" name="q20" value="B" id="q20a2">
+      <label for="q20a2">B. Links domestic monetary policy, external (foreign) conditions, and inflation dynamics to determine short-run equilibrium output</label><br>
+      <input type="radio" name="q20" value="C" id="q20a3">
+      <label for="q20a3">C. Ignores exchange rate effects in determining aggregate demand</label><br>
+      <input type="radio" name="q20" value="D" id="q20a4">
+      <label for="q20a4">D. Only applies to long-run growth analysis</label><br>
+      <button type="button" onclick="checkAnswer(20, 'B', 'It links domestic monetary policy, external conditions, and inflation dynamics')">Check</button>
+      <div id="result-q20" class="result"></div>
+    </div>
+    
+  </form>
+  
+  <script>
+    function checkAnswer(qNumber, correctAnswer, correctAnswerText) {
+      var answer = document.querySelector('input[name="q' + qNumber + '"]:checked');
+      var resultDiv = document.getElementById('result-q' + qNumber);
+      
+      // Remove previous classes
+      resultDiv.classList.remove("correct", "incorrect");
+      
+      if (!answer) {
+        resultDiv.innerHTML = "Please select an answer.";
+        return;
+      }
+      
+      if (answer.value === correctAnswer) {
+        resultDiv.innerHTML = "✅ Correct!";
+        resultDiv.classList.add("correct");
+      } else {
+        resultDiv.innerHTML = "❌ Incorrect. The correct answer is " + correctAnswer + ". " + correctAnswerText;
+        resultDiv.classList.add("incorrect");
+      }
+    }
+  </script>
+</body>
+</html>

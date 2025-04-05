@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 5 - Keynesian Cross and the Multiplier</title>
+  <style>
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .banner {
+      text-align: center;
+      background-color: #f0f0f0;
+      padding: 10px;
+      border-bottom: 2px solid #ccc;
+      margin-bottom: 20px;
+    }
+    .banner h2 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+    .banner p {
+      margin: 5px 0 0 0;
+      font-size: 0.9em;
+      color: #555;
+    }
+    nav {
+      margin-bottom: 20px;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+    }
+    nav ul li {
+      display: inline;
+      margin-right: 10px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #007BFF;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    .question {
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    .question p {
+      margin: 0 0 5px 0;
+    }
+    .result {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .correct {
+      color: green;
+    }
+    .incorrect {
+      color: red;
+    }
+    button {
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header class="banner">
+    <h2>ECO 102 Practise Quiz</h2>
+    <p>Teng</p>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="chapter1.html">Chapter 1</a></li>
+      <li><a href="chapter2.html">Chapter 2</a></li>
+      <li><a href="chapter3.html">Chapter 3</a></li>
+      <li><a href="chapter4.html">Chapter 4</a></li>
+      <li><a href="chapter5.html">Chapter 5</a></li>
+      <li><a href="chapter6.html">Chapter 6</a></li>
+      <li><a href="chapter7.html">Chapter 7</a></li>
+      <li><a href="chapter8.html">Chapter 8</a></li>
+      <li><a href="chapter9.html">Chapter 9</a></li>
+      <li><a href="chapter10.html">Chapter 10</a></li>
+      <li><a href="chapter11.html">Chapter 11</a></li>
+      <li><a href="chapter12.html">Chapter 12</a></li>
+    </ul>
+  </nav>
+
+  <h1>Chapter 5 - Keynesian Cross and the Multiplier</h1>
+  <form id="quizForm">
+    <!-- Question 1 -->
+    <div class="question">
+      <p>1. Which of the following best describes the Keynesian multiplier effect?</p>
+      <input type="radio" name="q1" value="A" id="q1a1">
+      <label for="q1a1">A. The process by which an initial change in spending leads to a proportionally larger change in aggregate output</label><br>
+      <input type="radio" name="q1" value="B" id="q1a2">
+      <label for="q1a2">B. The conversion of nominal GDP into real GDP</label><br>
+      <input type="radio" name="q1" value="C" id="q1a3">
+      <label for="q1a3">C. The ratio of government spending to national saving</label><br>
+      <input type="radio" name="q1" value="D" id="q1a4">
+      <label for="q1a4">D. The adjustment of prices over time</label><br>
+      <button type="button" onclick="checkAnswer(1, 'A', 'The process by which an initial change in spending leads to a proportionally larger change in aggregate output')">Check</button>
+      <div id="result-q1" class="result"></div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question">
+      <p>2. In the simple multiplier model with no taxes or imports, the multiplier is defined as:</p>
+      <input type="radio" name="q2" value="A" id="q2a1">
+      <label for="q2a1">A. 1 – mpc</label><br>
+      <input type="radio" name="q2" value="B" id="q2a2">
+      <label for="q2a2">B. 1/(1 – mpc)</label><br>
+      <input type="radio" name="q2" value="C" id="q2a3">
+      <label for="q2a3">C. mpc/(1 – mpc)</label><br>
+      <input type="radio" name="q2" value="D" id="q2a4">
+      <label for="q2a4">D. (1 – mpc)/mpc</label><br>
+      <button type="button" onclick="checkAnswer(2, 'B', '1/(1 – mpc)')">Check</button>
+      <div id="result-q2" class="result"></div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question">
+      <p>3. If the marginal propensity to consume (mpc) is 0.8, what is the value of the simple multiplier?</p>
+      <input type="radio" name="q3" value="A" id="q3a1">
+      <label for="q3a1">A. 2</label><br>
+      <input type="radio" name="q3" value="B" id="q3a2">
+      <label for="q3a2">B. 3</label><br>
+      <input type="radio" name="q3" value="C" id="q3a3">
+      <label for="q3a3">C. 5</label><br>
+      <input type="radio" name="q3" value="D" id="q3a4">
+      <label for="q3a4">D. 8</label><br>
+      <button type="button" onclick="checkAnswer(3, 'C', '5')">Check</button>
+      <div id="result-q3" class="result"></div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="question">
+      <p>4. The consumption function used in the multiplier model is typically represented as:</p>
+      <input type="radio" name="q4" value="A" id="q4a1">
+      <label for="q4a1">A. C = mpc × Y</label><br>
+      <input type="radio" name="q4" value="B" id="q4a2">
+      <label for="q4a2">B. C = autonomous consumption + mpc × (Y – T)</label><br>
+      <input type="radio" name="q4" value="C" id="q4a3">
+      <label for="q4a3">C. C = Y – S</label><br>
+      <input type="radio" name="q4" value="D" id="q4a4">
+      <label for="q4a4">D. C = Y/T</label><br>
+      <button type="button" onclick="checkAnswer(4, 'B', 'C = autonomous consumption + mpc × (Y – T)')">Check</button>
+      <div id="result-q4" class="result"></div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="question">
+      <p>5. The interdependence principle underlying the multiplier effect implies that:</p>
+      <input type="radio" name="q5" value="A" id="q5a1">
+      <label for="q5a1">A. An increase in income reduces consumption</label><br>
+      <input type="radio" name="q5" value="B" id="q5a2">
+      <label for="q5a2">B. More spending generates additional income, which in turn leads to further spending</label><br>
+      <input type="radio" name="q5" value="C" id="q5a3">
+      <label for="q5a3">C. Government spending crowds out private investment</label><br>
+      <input type="radio" name="q5" value="D" id="q5a4">
+      <label for="q5a4">D. Increases in taxes always reduce consumption by the same amount</label><br>
+      <button type="button" onclick="checkAnswer(5, 'B', 'More spending generates additional income, which in turn leads to further spending')">Check</button>
+      <div id="result-q5" class="result"></div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="question">
+      <p>6. In the aggregate expenditures (AE) model, equilibrium occurs when:</p>
+      <input type="radio" name="q6" value="A" id="q6a1">
+      <label for="q6a1">A. Actual output equals planned spending</label><br>
+      <input type="radio" name="q6" value="B" id="q6a2">
+      <label for="q6a2">B. Consumption equals savings</label><br>
+      <input type="radio" name="q6" value="C" id="q6a3">
+      <label for="q6a3">C. Government spending equals taxes</label><br>
+      <input type="radio" name="q6" value="D" id="q6a4">
+      <label for="q6a4">D. Planned investment equals actual investment</label><br>
+      <button type="button" onclick="checkAnswer(6, 'A', 'Actual output equals planned spending')">Check</button>
+      <div id="result-q6" class="result"></div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="question">
+      <p>7. In the AE diagram, the 45-degree line represents:</p>
+      <input type="radio" name="q7" value="A" id="q7a1">
+      <label for="q7a1">A. All points where aggregate demand equals aggregate supply</label><br>
+      <input type="radio" name="q7" value="B" id="q7a2">
+      <label for="q7a2">B. Points where planned spending exactly equals actual output</label><br>
+      <input type="radio" name="q7" value="C" id="q7a3">
+      <label for="q7a3">C. The maximum production capacity of the economy</label><br>
+      <input type="radio" name="q7" value="D" id="q7a4">
+      <label for="q7a4">D. The level of autonomous consumption</label><br>
+      <button type="button" onclick="checkAnswer(7, 'B', 'Points where planned spending exactly equals actual output')">Check</button>
+      <div id="result-q7" class="result"></div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="question">
+      <p>8. Suppose autonomous consumption increases by $10 and mpc is 0.8. By how much will equilibrium GDP change in the simple model?</p>
+      <input type="radio" name="q8" value="A" id="q8a1">
+      <label for="q8a1">A. $8</label><br>
+      <input type="radio" name="q8" value="B" id="q8a2">
+      <label for="q8a2">B. $10</label><br>
+      <input type="radio" name="q8" value="C" id="q8a3">
+      <label for="q8a3">C. $50</label><br>
+      <input type="radio" name="q8" value="D" id="q8a4">
+      <label for="q8a4">D. $80</label><br>
+      <button type="button" onclick="checkAnswer(8, 'C', '$50')">Check</button>
+      <div id="result-q8" class="result"></div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="question">
+      <p>9. The paradox of thrift refers to the situation in which:</p>
+      <input type="radio" name="q9" value="A" id="q9a1">
+      <label for="q9a1">A. Increased individual saving leads to a decrease in aggregate demand, leaving national saving unchanged</label><br>
+      <input type="radio" name="q9" value="B" id="q9a2">
+      <label for="q9a2">B. Increased government saving always boosts private consumption</label><br>
+      <input type="radio" name="q9" value="C" id="q9a3">
+      <label for="q9a3">C. Tax cuts lead to a higher multiplier effect</label><br>
+      <input type="radio" name="q9" value="D" id="q9a4">
+      <label for="q9a4">D. Decreased consumption has no effect on GDP</label><br>
+      <button type="button" onclick="checkAnswer(9, 'A', 'Increased individual saving leads to a decrease in aggregate demand, leaving national saving unchanged')">Check</button>
+      <div id="result-q9" class="result"></div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="question">
+      <p>10. Fiscal policy influences the multiplier by altering:</p>
+      <input type="radio" name="q10" value="A" id="q10a1">
+      <label for="q10a1">A. The marginal propensity to consume</label><br>
+      <input type="radio" name="q10" value="B" id="q10a2">
+      <label for="q10a2">B. The level of autonomous spending</label><br>
+      <input type="radio" name="q10" value="C" id="q10a3">
+      <label for="q10a3">C. The equilibrium level of prices</label><br>
+      <input type="radio" name="q10" value="D" id="q10a4">
+      <label for="q10a4">D. The rate of depreciation</label><br>
+      <button type="button" onclick="checkAnswer(10, 'B', 'The level of autonomous spending')">Check</button>
+      <div id="result-q10" class="result"></div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="question">
+      <p>11. When government spending is financed by increased taxes (balanced-budget fiscal policy), the impact on GDP is:</p>
+      <input type="radio" name="q11" value="A" id="q11a1">
+      <label for="q11a1">A. Larger than if government spending were debt-financed</label><br>
+      <input type="radio" name="q11" value="B" id="q11a2">
+      <label for="q11a2">B. The same as if government spending were debt-financed</label><br>
+      <input type="radio" name="q11" value="C" id="q11a3">
+      <label for="q11a3">C. Zero</label><br>
+      <input type="radio" name="q11" value="D" id="q11a4">
+      <label for="q11a4">D. Negative</label><br>
+      <button type="button" onclick="checkAnswer(11, 'B', 'The same as if government spending were debt-financed')">Check</button>
+      <div id="result-q11" class="result"></div>
+    </div>
+
+    <!-- Question 12 -->
+    <div class="question">
+      <p>12. When an income tax is introduced, the new multiplier becomes:</p>
+      <input type="radio" name="q12" value="A" id="q12a1">
+      <label for="q12a1">A. 1/(1 – mpc)</label><br>
+      <input type="radio" name="q12" value="B" id="q12a2">
+      <label for="q12a2">B. 1/(1 – (1 – t)×mpc)</label><br>
+      <input type="radio" name="q12" value="C" id="q12a3">
+      <label for="q12a3">C. 1/(1 – t×mpc)</label><br>
+      <input type="radio" name="q12" value="D" id="q12a4">
+      <label for="q12a4">D. 1/(mpc×(1 – t))</label><br>
+      <button type="button" onclick="checkAnswer(12, 'B', '1/(1 – (1 – t)×mpc)')">Check</button>
+      <div id="result-q12" class="result"></div>
+    </div>
+
+    <!-- Question 13 -->
+    <div class="question">
+      <p>13. In an open economy where imports depend on income, the multiplier is typically:</p>
+      <input type="radio" name="q13" value="A" id="q13a1">
+      <label for="q13a1">A. Larger than in a closed economy</label><br>
+      <input type="radio" name="q13" value="B" id="q13a2">
+      <label for="q13a2">B. Unchanged compared to a closed economy</label><br>
+      <input type="radio" name="q13" value="C" id="q13a3">
+      <label for="q13a3">C. Smaller than in a closed economy</label><br>
+      <input type="radio" name="q13" value="D" id="q13a4">
+      <label for="q13a4">D. Equal to the simple multiplier</label><br>
+      <button type="button" onclick="checkAnswer(13, 'C', 'Smaller than in a closed economy')">Check</button>
+      <div id="result-q13" class="result"></div>
+    </div>
+
+    <!-- Question 14 -->
+    <div class="question">
+      <p>14. The marginal propensity to consume (mpc) is defined as:</p>
+      <input type="radio" name="q14" value="A" id="q14a1">
+      <label for="q14a1">A. The fraction of additional income that households save</label><br>
+      <input type="radio" name="q14" value="B" id="q14a2">
+      <label for="q14a2">B. The fraction of additional income that households spend on consumption</label><br>
+      <input type="radio" name="q14" value="C" id="q14a3">
+      <label for="q14a3">C. The ratio of consumption to total income</label><br>
+      <input type="radio" name="q14" value="D" id="q14a4">
+      <label for="q14a4">D. The rate at which taxes change with income</label><br>
+      <button type="button" onclick="checkAnswer(14, 'B', 'The fraction of additional income that households spend on consumption')">Check</button>
+      <div id="result-q14" class="result"></div>
+    </div>
+
+    <!-- Question 15 -->
+    <div class="question">
+      <p>15. In the Keynesian multiplier model, which of the following is considered an exogenous variable?</p>
+      <input type="radio" name="q15" value="A" id="q15a1">
+      <label for="q15a1">A. Equilibrium income (Y*)</label><br>
+      <input type="radio" name="q15" value="B" id="q15a2">
+      <label for="q15a2">B. Autonomous consumption</label><br>
+      <input type="radio" name="q15" value="C" id="q15a3">
+      <label for="q15a3">C. Aggregate consumption</label><br>
+      <input type="radio" name="q15" value="D" id="q15a4">
+      <label for="q15a4">D. Income generated through the multiplier process</label><br>
+      <button type="button" onclick="checkAnswer(15, 'B', 'Autonomous consumption')">Check</button>
+      <div id="result-q15" class="result"></div>
+    </div>
+
+    <!-- Question 16 -->
+    <div class="question">
+      <p>16. According to the multiplier model, an increase in taxes (holding other exogenous variables constant) will have what effect on equilibrium GDP?</p>
+      <input type="radio" name="q16" value="A" id="q16a1">
+      <label for="q16a1">A. It increases GDP by the full tax amount</label><br>
+      <input type="radio" name="q16" value="B" id="q16a2">
+      <label for="q16a2">B. It decreases GDP by a fraction determined by the tax multiplier</label><br>
+      <input type="radio" name="q16" value="C" id="q16a3">
+      <label for="q16a3">C. It has no effect on GDP</label><br>
+      <input type="radio" name="q16" value="D" id="q16a4">
+      <label for="q16a4">D. It increases GDP by the multiplier effect</label><br>
+      <button type="button" onclick="checkAnswer(16, 'B', 'It decreases GDP by a fraction determined by the tax multiplier')">Check</button>
+      <div id="result-q16" class="result"></div>
+    </div>
+
+    <!-- Question 17 -->
+    <div class="question">
+      <p>17. Why does a small change in autonomous spending lead to a larger change in overall GDP?</p>
+      <input type="radio" name="q17" value="A" id="q17a1">
+      <label for="q17a1">A. Because prices adjust instantly to changes in spending</label><br>
+      <input type="radio" name="q17" value="B" id="q17a2">
+      <label for="q17a2">B. Because each round of spending creates additional income that is partly spent</label><br>
+      <input type="radio" name="q17" value="C" id="q17a3">
+      <label for="q17a3">C. Because the marginal propensity to save is greater than one</label><br>
+      <input type="radio" name="q17" value="D" id="q17a4">
+      <label for="q17a4">D. Because government policies fully offset the initial spending change</label><br>
+      <button type="button" onclick="checkAnswer(17, 'B', 'Each round of spending creates additional income that is partly spent')">Check</button>
+      <div id="result-q17" class="result"></div>
+    </div>
+
+    <!-- Question 18 -->
+    <div class="question">
+      <p>18. The formula ΔY = (1/(1 – mpc)) × ΔAE represents:</p>
+      <input type="radio" name="q18" value="A" id="q18a1">
+      <label for="q18a1">A. The change in taxes required to stabilize GDP</label><br>
+      <input type="radio" name="q18" value="B" id="q18a2">
+      <label for="q18a2">B. The change in equilibrium GDP resulting from a change in autonomous aggregate expenditure</label><br>
+      <input type="radio" name="q18" value="C" id="q18a3">
+      <label for="q18a3">C. The marginal change in consumption for a given change in income</label><br>
+      <input type="radio" name="q18" value="D" id="q18a4">
+      <label for="q18a4">D. The change in saving due to a change in government spending</label><br>
+      <button type="button" onclick="checkAnswer(18, 'B', 'The change in equilibrium GDP resulting from a change in autonomous aggregate expenditure')">Check</button>
+      <div id="result-q18" class="result"></div>
+    </div>
+
+    <!-- Question 19 -->
+    <div class="question">
+      <p>19. In a fiscal policy scenario where government spending increases by $100 and mpc is 0.8, by how much does equilibrium GDP change in the simple multiplier model?</p>
+      <input type="radio" name="q19" value="A" id="q19a1">
+      <label for="q19a1">A. $100</label><br>
+      <input type="radio" name="q19" value="B" id="q19a2">
+      <label for="q19a2">B. $125</label><br>
+      <input type="radio" name="q19" value="C" id="q19a3">
+      <label for="q19a3">C. $400</label><br>
+      <input type="radio" name="q19" value="D" id="q19a4">
+      <label for="q19a4">D. $500</label><br>
+      <button type="button" onclick="checkAnswer(19, 'D', '$500')">Check</button>
+      <div id="result-q19" class="result"></div>
+    </div>
+
+    <!-- Question 20 -->
+    <div class="question">
+      <p>20. The multiplier model in the Keynesian framework assumes that in the short run:</p>
+      <input type="radio" name="q20" value="A" id="q20a1">
+      <label for="q20a1">A. Prices, wages, and interest rates are fixed</label><br>
+      <input type="radio" name="q20" value="B" id="q20a2">
+      <label for="q20a2">B. Prices are fixed but wages adjust</label><br>
+      <input type="radio" name="q20" value="C" id="q20a3">
+      <label for="q20a3">C. Interest rates are fixed but prices adjust</label><br>
+      <input type="radio" name="q20" value="D" id="q20a4">
+      <label for="q20a4">D. All prices, wages, and interest rates are flexible</label><br>
+      <button type="button" onclick="checkAnswer(20, 'A', 'Prices, wages, and interest rates are fixed')">Check</button>
+      <div id="result-q20" class="result"></div>
+    </div>
+  </form>
+
+  <script>
+    function checkAnswer(qNumber, correctAnswer, correctAnswerText) {
+      var answer = document.querySelector('input[name="q' + qNumber + '"]:checked');
+      var resultDiv = document.getElementById('result-q' + qNumber);
+      
+      // Remove previous classes
+      resultDiv.classList.remove("correct", "incorrect");
+      
+      if (!answer) {
+        resultDiv.innerHTML = "Please select an answer.";
+        return;
+      }
+      
+      if (answer.value === correctAnswer) {
+        resultDiv.innerHTML = "✅ Correct!";
+        resultDiv.classList.add("correct");
+      } else {
+        resultDiv.innerHTML = "❌ Incorrect. The correct answer is " + correctAnswer + ". " + correctAnswerText;
+        resultDiv.classList.add("incorrect");
+      }
+    }
+  </script>
+</body>
+</html>

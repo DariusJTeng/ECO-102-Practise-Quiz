@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 3 - Inflation</title>
+  <style>
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .banner {
+      text-align: center;
+      background-color: #f0f0f0;
+      padding: 10px;
+      border-bottom: 2px solid #ccc;
+      margin-bottom: 20px;
+    }
+    .banner h2 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+    .banner p {
+      margin: 5px 0 0 0;
+      font-size: 0.9em;
+      color: #555;
+    }
+    nav {
+      margin-bottom: 20px;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+    }
+    nav ul li {
+      display: inline;
+      margin-right: 10px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #007BFF;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    .question {
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    .result {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .correct {
+      color: green;
+    }
+    .incorrect {
+      color: red;
+    }
+    button {
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header class="banner">
+    <h2>ECO 102 Practise Quiz</h2>
+    <p>Teng</p>
+  </header>
+  
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="chapter1.html">Chapter 1</a></li>
+      <li><a href="chapter2.html">Chapter 2</a></li>
+      <li><a href="chapter3.html">Chapter 3</a></li>
+      <li><a href="chapter4.html">Chapter 4</a></li>
+      <li><a href="chapter5.html">Chapter 5</a></li>
+      <li><a href="chapter6.html">Chapter 6</a></li>
+      <li><a href="chapter7.html">Chapter 7</a></li>
+      <li><a href="chapter8.html">Chapter 8</a></li>
+      <li><a href="chapter9.html">Chapter 9</a></li>
+      <li><a href="chapter10.html">Chapter 10</a></li>
+      <li><a href="chapter11.html">Chapter 11</a></li>
+      <li><a href="chapter12.html">Chapter 12</a></li>
+    </ul>
+  </nav>
+  
+  <h1>Chapter 3 - Inflation</h1>
+  <form id="quizForm">
+    <!-- Question 1 -->
+    <div class="question">
+      <p>1. Inflation is best defined as:</p>
+      <input type="radio" name="q1" value="A" id="q1a1">
+      <label for="q1a1">A. A sudden drop in prices over a short period</label><br>
+      <input type="radio" name="q1" value="B" id="q1a2">
+      <label for="q1a2">B. A general rise in the overall level of prices, leading to a decline in the purchasing power of money</label><br>
+      <input type="radio" name="q1" value="C" id="q1a3">
+      <label for="q1a3">C. An increase in the production of goods and services</label><br>
+      <input type="radio" name="q1" value="D" id="q1a4">
+      <label for="q1a4">D. A decrease in the government’s spending</label><br>
+      <button type="button" onclick="checkAnswer(1, 'B', 'A general rise in the overall level of prices, leading to a decline in the purchasing power of money')">Check</button>
+      <div id="result-q1" class="result"></div>
+    </div>
+    
+    <!-- Question 2 -->
+    <div class="question">
+      <p>2. Which measure of the price level uses a fixed basket of goods and services?</p>
+      <input type="radio" name="q2" value="A" id="q2a1">
+      <label for="q2a1">A. GDP Deflator</label><br>
+      <input type="radio" name="q2" value="B" id="q2a2">
+      <label for="q2a2">B. Consumer Price Index (CPI)</label><br>
+      <input type="radio" name="q2" value="C" id="q2a3">
+      <label for="q2a3">C. Producer Price Index (PPI)</label><br>
+      <input type="radio" name="q2" value="D" id="q2a4">
+      <label for="q2a4">D. Personal Consumption Expenditures Price Index</label><br>
+      <button type="button" onclick="checkAnswer(2, 'B', 'Consumer Price Index (CPI)')">Check</button>
+      <div id="result-q2" class="result"></div>
+    </div>
+    
+    <!-- Question 3 -->
+    <div class="question">
+      <p>3. When comparing domestic price levels, the GDP deflator differs from the CPI because it:</p>
+      <input type="radio" name="q3" value="A" id="q3a1">
+      <label for="q3a1">A. Includes imports and excludes exports</label><br>
+      <input type="radio" name="q3" value="B" id="q3a2">
+      <label for="q3a2">B. Excludes imports and includes exports</label><br>
+      <input type="radio" name="q3" value="C" id="q3a3">
+      <label for="q3a3">C. Holds quantities fixed across years</label><br>
+      <input type="radio" name="q3" value="D" id="q3a4">
+      <label for="q3a4">D. Measures only food and energy prices</label><br>
+      <button type="button" onclick="checkAnswer(3, 'B', 'Excludes imports and includes exports')">Check</button>
+      <div id="result-q3" class="result"></div>
+    </div>
+    
+    <!-- Question 4 -->
+    <div class="question">
+      <p>4. In the calculation of the CPI, the quantity of goods in the basket is held constant at:</p>
+      <input type="radio" name="q4" value="A" id="q4a1">
+      <label for="q4a1">A. Current year quantities</label><br>
+      <input type="radio" name="q4" value="B" id="q4a2">
+      <label for="q4a2">B. Base year quantities</label><br>
+      <input type="radio" name="q4" value="C" id="q4a3">
+      <label for="q4a3">C. Average quantities over several years</label><br>
+      <input type="radio" name="q4" value="D" id="q4a4">
+      <label for="q4a4">D. Future projected quantities</label><br>
+      <button type="button" onclick="checkAnswer(4, 'B', 'Base year quantities')">Check</button>
+      <div id="result-q4" class="result"></div>
+    </div>
+    
+    <!-- Question 5 -->
+    <div class="question">
+      <p>5. To convert a nominal amount into a real amount (in base-year dollars), which formula is used?</p>
+      <input type="radio" name="q5" value="A" id="q5a1">
+      <label for="q5a1">A. Real Amount = Nominal Amount × Price Level</label><br>
+      <input type="radio" name="q5" value="B" id="q5a2">
+      <label for="q5a2">B. Real Amount = Nominal Amount – Price Level</label><br>
+      <input type="radio" name="q5" value="C" id="q5a3">
+      <label for="q5a3">C. Real Amount = Nominal Amount / Price Level</label><br>
+      <input type="radio" name="q5" value="D" id="q5a4">
+      <label for="q5a4">D. Real Amount = Nominal Amount + Price Level</label><br>
+      <button type="button" onclick="checkAnswer(5, 'C', 'Real Amount = Nominal Amount / Price Level')">Check</button>
+      <div id="result-q5" class="result"></div>
+    </div>
+    
+    <!-- Question 6 -->
+    <div class="question">
+      <p>6. The approximate relationship between the real interest rate (r), nominal interest rate (i), and inflation rate (π) is given by:</p>
+      <input type="radio" name="q6" value="A" id="q6a1">
+      <label for="q6a1">A. r ≈ i + π</label><br>
+      <input type="radio" name="q6" value="B" id="q6a2">
+      <label for="q6a2">B. r ≈ i × π</label><br>
+      <input type="radio" name="q6" value="C" id="q6a3">
+      <label for="q6a3">C. r ≈ i − π</label><br>
+      <input type="radio" name="q6" value="D" id="q6a4">
+      <label for="q6a4">D. r ≈ i / π</label><br>
+      <button type="button" onclick="checkAnswer(6, 'C', 'r ≈ i − π')">Check</button>
+      <div id="result-q6" class="result"></div>
+    </div>
+    
+    <!-- Question 7 -->
+    <div class="question">
+      <p>7. If the nominal interest rate on a loan is 6% and inflation is 10%, what is the likely effect on the real interest rate?</p>
+      <input type="radio" name="q7" value="A" id="q7a1">
+      <label for="q7a1">A. The real interest rate is positive</label><br>
+      <input type="radio" name="q7" value="B" id="q7a2">
+      <label for="q7a2">B. The real interest rate is zero</label><br>
+      <input type="radio" name="q7" value="C" id="q7a3">
+      <label for="q7a3">C. The real interest rate is negative, implying that borrowers gain at the expense of lenders</label><br>
+      <input type="radio" name="q7" value="D" id="q7a4">
+      <label for="q7a4">D. Inflation does not affect the real interest rate</label><br>
+      <button type="button" onclick="checkAnswer(7, 'C', 'The real interest rate is negative, implying that borrowers gain at the expense of lenders')">Check</button>
+      <div id="result-q7" class="result"></div>
+    </div>
+    
+    <!-- Question 8 -->
+    <div class="question">
+      <p>8. Money illusion refers to:</p>
+      <input type="radio" name="q8" value="A" id="q8a1">
+      <label for="q8a1">A. The tendency to overestimate the effects of deflation</label><br>
+      <input type="radio" name="q8" value="B" id="q8a2">
+      <label for="q8a2">B. The tendency to confuse nominal values with real values and ignore the impact of inflation</label><br>
+      <input type="radio" name="q8" value="C" id="q8a3">
+      <label for="q8a3">C. The belief that higher prices always lead to better quality goods</label><br>
+      <input type="radio" name="q8" value="D" id="q8a4">
+      <label for="q8a4">D. The habit of saving money rather than spending it</label><br>
+      <button type="button" onclick="checkAnswer(8, 'B', 'The tendency to confuse nominal values with real values and ignore the impact of inflation')">Check</button>
+      <div id="result-q8" class="result"></div>
+    </div>
+    
+    <!-- Question 9 -->
+    <div class="question">
+      <p>9. Menu costs are best described as:</p>
+      <input type="radio" name="q9" value="A" id="q9a1">
+      <label for="q9a1">A. The financial burden imposed by having to change prices frequently due to inflation</label><br>
+      <input type="radio" name="q9" value="B" id="q9a2">
+      <label for="q9a2">B. The cost of publishing a restaurant menu</label><br>
+      <input type="radio" name="q9" value="C" id="q9a3">
+      <label for="q9a3">C. The lost revenue from unsold goods</label><br>
+      <input type="radio" name="q9" value="D" id="q9a4">
+      <label for="q9a4">D. The opportunity cost of holding cash</label><br>
+      <button type="button" onclick="checkAnswer(9, 'A', 'The financial burden imposed by having to change prices frequently due to inflation')">Check</button>
+      <div id="result-q9" class="result"></div>
+    </div>
+    
+    <!-- Question 10 -->
+    <div class="question">
+      <p>10. Disinflation refers to:</p>
+      <input type="radio" name="q10" value="A" id="q10a1">
+      <label for="q10a1">A. A period of falling prices</label><br>
+      <input type="radio" name="q10" value="B" id="q10a2">
+      <label for="q10a2">B. A decrease in the rate of inflation, where prices continue to rise but at a slower pace</label><br>
+      <input type="radio" name="q10" value="C" id="q10a3">
+      <label for="q10a3">C. A rapid increase in prices over a short period</label><br>
+      <input type="radio" name="q10" value="D" id="q10a4">
+      <label for="q10a4">D. Inflation that is caused by changes in the money supply</label><br>
+      <button type="button" onclick="checkAnswer(10, 'B', 'A decrease in the rate of inflation, where prices continue to rise but at a slower pace')">Check</button>
+      <div id="result-q10" class="result"></div>
+    </div>
+    
+    <!-- Question 11 -->
+    <div class="question">
+      <p>11. Deflation is characterized by:</p>
+      <input type="radio" name="q11" value="A" id="q11a1">
+      <label for="q11a1">A. A general increase in the price level</label><br>
+      <input type="radio" name="q11" value="B" id="q11a2">
+      <label for="q11a2">B. A decrease in the price level, leading consumers to postpone purchases</label><br>
+      <input type="radio" name="q11" value="C" id="q11a3">
+      <label for="q11a3">C. Rapidly rising prices</label><br>
+      <input type="radio" name="q11" value="D" id="q11a4">
+      <label for="q11a4">D. A temporary drop in specific commodity prices</label><br>
+      <button type="button" onclick="checkAnswer(11, 'B', 'A decrease in the price level, leading consumers to postpone purchases')">Check</button>
+      <div id="result-q11" class="result"></div>
+    </div>
+    
+    <!-- Question 12 -->
+    <div class="question">
+      <p>12. Which of the following historical examples is associated with hyperinflation?</p>
+      <input type="radio" name="q12" value="A" id="q12a1">
+      <label for="q12a1">A. The United States during the 1990s</label><br>
+      <input type="radio" name="q12" value="B" id="q12a2">
+      <label for="q12a2">B. Germany in 1923</label><br>
+      <input type="radio" name="q12" value="C" id="q12a3">
+      <label for="q12a3">C. Japan during the early 2000s</label><br>
+      <input type="radio" name="q12" value="D" id="q12a4">
+      <label for="q12a4">D. Canada in the 1980s</label><br>
+      <button type="button" onclick="checkAnswer(12, 'B', 'Germany in 1923')">Check</button>
+      <div id="result-q12" class="result"></div>
+    </div>
+    
+    <!-- Question 13 -->
+    <div class="question">
+      <p>13. In calculating the CPI, the percentage change from the base year is computed by comparing:</p>
+      <input type="radio" name="q13" value="A" id="q13a1">
+      <label for="q13a1">A. The change in quantities only</label><br>
+      <input type="radio" name="q13" value="B" id="q13a2">
+      <label for="q13a2">B. The change in the total cost of the fixed basket of goods over time</label><br>
+      <input type="radio" name="q13" value="C" id="q13a3">
+      <label for="q13a3">C. The change in GDP values</label><br>
+      <input type="radio" name="q13" value="D" id="q13a4">
+      <label for="q13a4">D. The change in export prices</label><br>
+      <button type="button" onclick="checkAnswer(13, 'B', 'The change in the total cost of the fixed basket of goods over time')">Check</button>
+      <div id="result-q13" class="result"></div>
+    </div>
+    
+    <!-- Question 14 -->
+    <div class="question">
+      <p>14. Which of the following is NOT considered a cost of expected inflation?</p>
+      <input type="radio" name="q14" value="A" id="q14a1">
+      <label for="q14a1">A. Menu costs</label><br>
+      <input type="radio" name="q14" value="B" id="q14a2">
+      <label for="q14a2">B. Shoe-leather costs</label><br>
+      <input type="radio" name="q14" value="C" id="q14a3">
+      <label for="q14a3">C. Distortions in the tax and benefits system when not indexed</label><br>
+      <input type="radio" name="q14" value="D" id="q14a4">
+      <label for="q14a4">D. Redistribution between borrowers and lenders</label><br>
+      <button type="button" onclick="checkAnswer(14, 'D', 'Redistribution between borrowers and lenders')">Check</button>
+      <div id="result-q14" class="result"></div>
+    </div>
+    
+    <!-- Question 15 -->
+    <div class="question">
+      <p>15. To adjust a nominal dollar amount from a past year to its equivalent in base-year dollars, one would:</p>
+      <input type="radio" name="q15" value="A" id="q15a1">
+      <label for="q15a1">A. Multiply by the current price level</label><br>
+      <input type="radio" name="q15" value="B" id="q15a2">
+      <label for="q15a2">B. Divide by the base year’s CPI</label><br>
+      <input type="radio" name="q15" value="C" id="q15a3">
+      <label for="q15a3">C. Divide by the current price level</label><br>
+      <input type="radio" name="q15" value="D" id="q15a4">
+      <label for="q15a4">D. Multiply by the base year’s CPI</label><br>
+      <button type="button" onclick="checkAnswer(15, 'C', 'Divide by the current price level')">Check</button>
+      <div id="result-q15" class="result"></div>
+    </div>
+    
+    <!-- Question 16 -->
+    <div class="question">
+      <p>16. The inflation rate is typically calculated as the percentage change in the CPI between:</p>
+      <input type="radio" name="q16" value="A" id="q16a1">
+      <label for="q16a1">A. Two non-consecutive years</label><br>
+      <input type="radio" name="q16" value="B" id="q16a2">
+      <label for="q16a2">B. The current year and the base year</label><br>
+      <input type="radio" name="q16" value="C" id="q16a3">
+      <label for="q16a3">C. Consecutive years</label><br>
+      <input type="radio" name="q16" value="D" id="q16a4">
+      <label for="q16a4">D. The current year and the average of previous years</label><br>
+      <button type="button" onclick="checkAnswer(16, 'C', 'Consecutive years')">Check</button>
+      <div id="result-q16" class="result"></div>
+    </div>
+    
+    <!-- Question 17 -->
+    <div class="question">
+      <p>17. How can inflation distort the tax and benefits systems if not properly indexed?</p>
+      <input type="radio" name="q17" value="A" id="q17a1">
+      <label for="q17a1">A. It increases the real value of government spending</label><br>
+      <input type="radio" name="q17" value="B" id="q17a2">
+      <label for="q17a2">B. It may push taxpayers into higher tax brackets, even if their real income has not increased</label><br>
+      <input type="radio" name="q17" value="C" id="q17a3">
+      <label for="q17a3">C. It results in higher unemployment rates</label><br>
+      <input type="radio" name="q17" value="D" id="q17a4">
+      <label for="q17a4">D. It automatically reduces government revenues</label><br>
+      <button type="button" onclick="checkAnswer(17, 'B', 'It may push taxpayers into higher tax brackets, even if their real income has not increased')">Check</button>
+      <div id="result-q17" class="result"></div>
+    </div>
+    
+    <!-- Question 18 -->
+    <div class="question">
+      <p>18. Unexpected inflation benefits borrowers and harms lenders because:</p>
+      <input type="radio" name="q18" value="A" id="q18a1">
+      <label for="q18a1">A. Borrowers repay their loans with money that has higher purchasing power</label><br>
+      <input type="radio" name="q18" value="B" id="q18a2">
+      <label for="q18a2">B. Lenders receive payments in money that is worth less in real terms than expected</label><br>
+      <input type="radio" name="q18" value="C" id="q18a3">
+      <label for="q18a3">C. Both borrowers and lenders are equally affected</label><br>
+      <input type="radio" name="q18" value="D" id="q18a4">
+      <label for="q18a4">D. It causes nominal wages to decrease</label><br>
+      <button type="button" onclick="checkAnswer(18, 'B', 'Lenders receive payments in money that is worth less in real terms than expected')">Check</button>
+      <div id="result-q18" class="result"></div>
+    </div>
+    
+    <!-- Question 19 -->
+    <div class="question">
+      <p>19. If an employee’s wage increases at exactly the rate of inflation, the employee’s real purchasing power:</p>
+      <input type="radio" name="q19" value="A" id="q19a1">
+      <label for="q19a1">A. Increases</label><br>
+      <input type="radio" name="q19" value="B" id="q19a2">
+      <label for="q19a2">B. Decreases</label><br>
+      <input type="radio" name="q19" value="C" id="q19a3">
+      <label for="q19a3">C. Remains unchanged</label><br>
+      <input type="radio" name="q19" value="D" id="q19a4">
+      <label for="q19a4">D. Fluctuates unpredictably</label><br>
+      <button type="button" onclick="checkAnswer(19, 'C', 'Remains unchanged')">Check</button>
+      <div id="result-q19" class="result"></div>
+    </div>
+    
+    <!-- Question 20 -->
+    <div class="question">
+      <p>20. A key difference between the CPI and the GDP deflator is that the CPI:</p>
+      <input type="radio" name="q20" value="A" id="q20a1">
+      <label for="q20a1">A. Measures the price level of all domestically produced goods and services</label><br>
+      <input type="radio" name="q20" value="B" id="q20a2">
+      <label for="q20a2">B. Excludes imported goods</label><br>
+      <input type="radio" name="q20" value="C" id="q20a3">
+      <label for="q20a3">C. Uses a fixed basket of consumer goods and services, including imports</label><br>
+      <input type="radio" name="q20" value="D" id="q20a4">
+      <label for="q20a4">D. Automatically adjusts for changes in consumption patterns</label><br>
+      <button type="button" onclick="checkAnswer(20, 'C', 'Uses a fixed basket of consumer goods and services, including imports')">Check</button>
+      <div id="result-q20" class="result"></div>
+    </div>
+    
+  </form>
+  
+  <script>
+    function checkAnswer(qNumber, correctAnswer, correctAnswerText) {
+      var answer = document.querySelector('input[name="q' + qNumber + '"]:checked');
+      var resultDiv = document.getElementById('result-q' + qNumber);
+      
+      // Remove previous classes
+      resultDiv.classList.remove("correct", "incorrect");
+      
+      if (!answer) {
+        resultDiv.innerHTML = "Please select an answer.";
+        return;
+      }
+      
+      if (answer.value === correctAnswer) {
+        resultDiv.innerHTML = "✅ Correct!";
+        resultDiv.classList.add("correct");
+      } else {
+        resultDiv.innerHTML = "❌ Incorrect. The correct answer is " + correctAnswer + ". " + correctAnswerText;
+        resultDiv.classList.add("incorrect");
+      }
+    }
+  </script>
+</body>
+</html>
