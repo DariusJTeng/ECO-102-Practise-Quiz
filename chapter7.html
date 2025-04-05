@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 7 - IS and MP Model</title>
+  <style>
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .banner {
+      text-align: center;
+      background-color: #f0f0f0;
+      padding: 10px;
+      border-bottom: 2px solid #ccc;
+      margin-bottom: 20px;
+    }
+    .banner h2 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+    .banner p {
+      margin: 5px 0 0 0;
+      font-size: 0.9em;
+      color: #555;
+    }
+    nav {
+      margin-bottom: 20px;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+    }
+    nav ul li {
+      display: inline;
+      margin-right: 10px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #007BFF;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    .question {
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    .question p {
+      margin: 0 0 5px 0;
+    }
+    .result {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .correct {
+      color: green;
+    }
+    .incorrect {
+      color: red;
+    }
+    button {
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header class="banner">
+    <h2>ECO 102 Practise Quiz</h2>
+    <p>Teng</p>
+  </header>
+  
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="chapter1.html">Chapter 1</a></li>
+      <li><a href="chapter2.html">Chapter 2</a></li>
+      <li><a href="chapter3.html">Chapter 3</a></li>
+      <li><a href="chapter4.html">Chapter 4</a></li>
+      <li><a href="chapter5.html">Chapter 5</a></li>
+      <li><a href="chapter6.html">Chapter 6</a></li>
+      <li><a href="chapter7.html">Chapter 7</a></li>
+      <li><a href="chapter8.html">Chapter 8</a></li>
+      <li><a href="chapter9.html">Chapter 9</a></li>
+      <li><a href="chapter10.html">Chapter 10</a></li>
+      <li><a href="chapter11.html">Chapter 11</a></li>
+      <li><a href="chapter12.html">Chapter 12</a></li>
+    </ul>
+  </nav>
+  
+  <h1>Chapter 7 - IS and MP Model</h1>
+  <form id="quizForm">
+    <!-- Question 1 -->
+    <div class="question">
+      <p>1. The IS curve in the IS-MP model represents:</p>
+      <input type="radio" name="q1" value="A" id="q1a1">
+      <label for="q1a1">A. The relationship between the real interest rate and planned aggregate expenditure (or output) where the goods market is in equilibrium</label><br>
+      <input type="radio" name="q1" value="B" id="q1a2">
+      <label for="q1a2">B. The relationship between fiscal deficits and government debt</label><br>
+      <input type="radio" name="q1" value="C" id="q1a3">
+      <label for="q1a3">C. The link between export demand and import supply</label><br>
+      <input type="radio" name="q1" value="D" id="q1a4">
+      <label for="q1a4">D. The relationship between inflation and unemployment</label><br>
+      <button type="button" onclick="checkAnswer(1, 'A', 'The relationship between the real interest rate and planned aggregate expenditure in equilibrium')">Check</button>
+      <div id="result-q1" class="result"></div>
+    </div>
+    
+    <!-- Question 2 -->
+    <div class="question">
+      <p>2. In the IS-MP framework, a decrease in the real interest rate leads to:</p>
+      <input type="radio" name="q2" value="A" id="q2a1">
+      <label for="q2a1">A. Lower consumption, lower investment, and lower government spending</label><br>
+      <input type="radio" name="q2" value="B" id="q2a2">
+      <label for="q2a2">B. Higher consumption, higher investment, and higher government spending</label><br>
+      <input type="radio" name="q2" value="C" id="q2a3">
+      <label for="q2a3">C. No change in aggregate demand</label><br>
+      <input type="radio" name="q2" value="D" id="q2a4">
+      <label for="q2a4">D. Only higher exports</label><br>
+      <button type="button" onclick="checkAnswer(2, 'B', 'Higher consumption, higher investment, and higher government spending')">Check</button>
+      <div id="result-q2" class="result"></div>
+    </div>
+    
+    <!-- Question 3 -->
+    <div class="question">
+      <p>3. Which of the following is a key assumption in deriving the IS curve?</p>
+      <input type="radio" name="q3" value="A" id="q3a1">
+      <label for="q3a1">A. Prices, wages, and interest rates are flexible in the short run</label><br>
+      <input type="radio" name="q3" value="B" id="q3a2">
+      <label for="q3a2">B. Firms adjust their production to changes in demand, not their prices</label><br>
+      <input type="radio" name="q3" value="C" id="q3a3">
+      <label for="q3a3">C. The central bank sets fiscal policy</label><br>
+      <input type="radio" name="q3" value="D" id="q3a4">
+      <label for="q3a4">D. The government always runs a balanced budget</label><br>
+      <button type="button" onclick="checkAnswer(3, 'B', 'Firms adjust production based on demand, not prices')">Check</button>
+      <div id="result-q3" class="result"></div>
+    </div>
+    
+    <!-- Question 4 -->
+    <div class="question">
+      <p>4. In the IS-MP model, the short-run equilibrium in the goods market is achieved when:</p>
+      <input type="radio" name="q4" value="A" id="q4a1">
+      <label for="q4a1">A. Actual output equals potential output</label><br>
+      <input type="radio" name="q4" value="B" id="q4a2">
+      <label for="q4a2">B. Aggregate expenditure equals actual output</label><br>
+      <input type="radio" name="q4" value="C" id="q4a3">
+      <label for="q4a3">C. Consumption equals saving</label><br>
+      <input type="radio" name="q4" value="D" id="q4a4">
+      <label for="q4a4">D. Nominal GDP equals real GDP</label><br>
+      <button type="button" onclick="checkAnswer(4, 'B', 'Aggregate expenditure equals actual output')">Check</button>
+      <div id="result-q4" class="result"></div>
+    </div>
+    
+    <!-- Question 5 -->
+    <div class="question">
+      <p>5. A shift to the right in the IS curve is most likely caused by:</p>
+      <input type="radio" name="q5" value="A" id="q5a1">
+      <label for="q5a1">A. A decrease in autonomous consumption</label><br>
+      <input type="radio" name="q5" value="B" id="q5a2">
+      <label for="q5a2">B. A decrease in government spending</label><br>
+      <input type="radio" name="q5" value="C" id="q5a3">
+      <label for="q5a3">C. An increase in autonomous spending (such as higher consumer confidence)</label><br>
+      <input type="radio" name="q5" value="D" id="q5a4">
+      <label for="q5a4">D. An increase in the risk premium</label><br>
+      <button type="button" onclick="checkAnswer(5, 'C', 'An increase in autonomous spending')">Check</button>
+      <div id="result-q5" class="result"></div>
+    </div>
+    
+    <!-- Question 6 -->
+    <div class="question">
+      <p>6. The MP curve in the IS-MP model represents:</p>
+      <input type="radio" name="q6" value="A" id="q6a1">
+      <label for="q6a1">A. The relationship between the risk-free rate and the output gap determined by monetary policy</label><br>
+      <input type="radio" name="q6" value="B" id="q6a2">
+      <label for="q6a2">B. The relationship between government spending and taxes</label><br>
+      <input type="radio" name="q6" value="C" id="q6a3">
+      <label for="q6a3">C. The supply of loanable funds in the economy</label><br>
+      <input type="radio" name="q6" value="D" id="q6a4">
+      <label for="q6a4">D. The foreign exchange market equilibrium</label><br>
+      <button type="button" onclick="checkAnswer(6, 'A', 'It represents the relationship between the risk-free rate and the output gap')">Check</button>
+      <div id="result-q6" class="result"></div>
+    </div>
+    
+    <!-- Question 7 -->
+    <div class="question">
+      <p>7. According to the model, if the central bank lowers its policy (risk-free) rate, the MP curve will:</p>
+      <input type="radio" name="q7" value="A" id="q7a1">
+      <label for="q7a1">A. Shift upward</label><br>
+      <input type="radio" name="q7" value="B" id="q7a2">
+      <label for="q7a2">B. Shift downward</label><br>
+      <input type="radio" name="q7" value="C" id="q7a3">
+      <label for="q7a3">C. Remain unchanged</label><br>
+      <input type="radio" name="q7" value="D" id="q7a4">
+      <label for="q7a4">D. Become vertical</label><br>
+      <button type="button" onclick="checkAnswer(7, 'B', 'It shifts downward')">Check</button>
+      <div id="result-q7" class="result"></div>
+    </div>
+    
+    <!-- Question 8 -->
+    <div class="question">
+      <p>8. In the IS-MP framework, macroeconomic equilibrium occurs when:</p>
+      <input type="radio" name="q8" value="A" id="q8a1">
+      <label for="q8a1">A. The IS curve intersects the 45-degree line</label><br>
+      <input type="radio" name="q8" value="B" id="q8a2">
+      <label for="q8a2">B. The MP curve is horizontal</label><br>
+      <input type="radio" name="q8" value="C" id="q8a3">
+      <label for="q8a3">C. The IS and MP curves intersect</label><br>
+      <input type="radio" name="q8" value="D" id="q8a4">
+      <label for="q8a4">D. Autonomous spending equals induced spending</label><br>
+      <button type="button" onclick="checkAnswer(8, 'C', 'Equilibrium occurs at the intersection of the IS and MP curves')">Check</button>
+      <div id="result-q8" class="result"></div>
+    </div>
+    
+    <!-- Question 9 -->
+    <div class="question">
+      <p>9. When there is a positive shock to autonomous spending (e.g., an increase in consumer confidence), the effect on the IS-MP model is:</p>
+      <input type="radio" name="q9" value="A" id="q9a1">
+      <label for="q9a1">A. A movement upward along the MP curve only</label><br>
+      <input type="radio" name="q9" value="B" id="q9a2">
+      <label for="q9a2">B. A rightward shift of the IS curve, increasing the output gap at a given real interest rate</label><br>
+      <input type="radio" name="q9" value="C" id="q9a3">
+      <label for="q9a3">C. A downward shift of the MP curve, lowering the real interest rate</label><br>
+      <input type="radio" name="q9" value="D" id="q9a4">
+      <label for="q9a4">D. No change, as autonomous spending does not affect equilibrium</label><br>
+      <button type="button" onclick="checkAnswer(9, 'B', 'A rightward shift of the IS curve')">Check</button>
+      <div id="result-q9" class="result"></div>
+    </div>
+    
+    <!-- Question 10 -->
+    <div class="question">
+      <p>10. A change in the risk premium (for example, due to increased default risk) affects the MP curve by:</p>
+      <input type="radio" name="q10" value="A" id="q10a1">
+      <label for="q10a1">A. Shifting it horizontally to the right</label><br>
+      <input type="radio" name="q10" value="B" id="q10a2">
+      <label for="q10a2">B. Shifting it vertically upward or downward</label><br>
+      <input type="radio" name="q10" value="C" id="q10a3">
+      <label for="q10a3">C. Shifting the IS curve instead</label><br>
+      <input type="radio" name="q10" value="D" id="q10a4">
+      <label for="q10a4">D. Not affecting the MP curve at all</label><br>
+      <button type="button" onclick="checkAnswer(10, 'B', 'It shifts vertically upward or downward')">Check</button>
+      <div id="result-q10" class="result"></div>
+    </div>
+    
+    <!-- Question 11 -->
+    <div class="question">
+      <p>11. If autonomous investment declines, holding other factors constant, the IS curve will:</p>
+      <input type="radio" name="q11" value="A" id="q11a1">
+      <label for="q11a1">A. Shift to the right</label><br>
+      <input type="radio" name="q11" value="B" id="q11a2">
+      <label for="q11a2">B. Shift to the left, leading to a lower output gap at any given real interest rate</label><br>
+      <input type="radio" name="q11" value="C" id="q11a3">
+      <label for="q11a3">C. Become steeper</label><br>
+      <input type="radio" name="q11" value="D" id="q11a4">
+      <label for="q11a4">D. Not shift, because investment is not part of the IS curve</label><br>
+      <button type="button" onclick="checkAnswer(11, 'B', 'It shifts to the left')">Check</button>
+      <div id="result-q11" class="result"></div>
+    </div>
+    
+    <!-- Question 12 -->
+    <div class="question">
+      <p>12. In the short-run IS-MP model, when the central bank cuts the policy rate (shifting the MP curve down), the expected effect is:</p>
+      <input type="radio" name="q12" value="A" id="q12a1">
+      <label for="q12a1">A. A higher real interest rate and a lower output gap</label><br>
+      <input type="radio" name="q12" value="B" id="q12a2">
+      <label for="q12a2">B. A lower real interest rate that increases aggregate demand, shifting output toward potential</label><br>
+      <input type="radio" name="q12" value="C" id="q12a3">
+      <label for="q12a3">C. No change in output gap because the IS curve remains fixed</label><br>
+      <input type="radio" name="q12" value="D" id="q12a4">
+      <label for="q12a4">D. A shift of the IS curve to the left</label><br>
+      <button type="button" onclick="checkAnswer(12, 'B', 'A lower real interest rate increases aggregate demand')">Check</button>
+      <div id="result-q12" class="result"></div>
+    </div>
+    
+    <!-- Question 13 -->
+    <div class="question">
+      <p>13. Expansionary fiscal policy in the IS-MP framework (for example, increased government spending) results in:</p>
+      <input type="radio" name="q13" value="A" id="q13a1">
+      <label for="q13a1">A. A shift upward of the MP curve</label><br>
+      <input type="radio" name="q13" value="B" id="q13a2">
+      <label for="q13a2">B. A rightward shift of the IS curve, raising output and a more positive output gap</label><br>
+      <input type="radio" name="q13" value="C" id="q13a3">
+      <label for="q13a3">C. A leftward shift of the IS curve, reducing output</label><br>
+      <input type="radio" name="q13" value="D" id="q13a4">
+      <label for="q13a4">D. A movement along the MP curve with no shift in the IS curve</label><br>
+      <button type="button" onclick="checkAnswer(13, 'B', 'A rightward shift of the IS curve')">Check</button>
+      <div id="result-q13" class="result"></div>
+    </div>
+    
+    <!-- Question 14 -->
+    <div class="question">
+      <p>14. If the economy is operating below potential output, a reduction in the real interest rate can help to:</p>
+      <input type="radio" name="q14" value="A" id="q14a1">
+      <label for="q14a1">A. Further lower consumption</label><br>
+      <input type="radio" name="q14" value="B" id="q14a2">
+      <label for="q14a2">B. Worsen the output gap</label><br>
+      <input type="radio" name="q14" value="C" id="q14a3">
+      <label for="q14a3">C. Boost aggregate demand and move actual output closer to potential output</label><br>
+      <input type="radio" name="q14" value="D" id="q14a4">
+      <label for="q14a4">D. Increase the risk premium</label><br>
+      <button type="button" onclick="checkAnswer(14, 'C', 'Boost aggregate demand to move output closer to potential')">Check</button>
+      <div id="result-q14" class="result"></div>
+    </div>
+    
+    <!-- Question 15 -->
+    <div class="question">
+      <p>15. The spending multiplier in the transition from the multiplier model to the IS curve is determined by:</p>
+      <input type="radio" name="q15" value="A" id="q15a1">
+      <label for="q15a1">A. The slope of the aggregate expenditure (AE) function</label><br>
+      <input type="radio" name="q15" value="B" id="q15a2">
+      <label for="q15a2">B. The level of government debt</label><br>
+      <input type="radio" name="q15" value="C" id="q15a3">
+      <label for="q15a3">C. The world real interest rate</label><br>
+      <input type="radio" name="q15" value="D" id="q15a4">
+      <label for="q15a4">D. The risk premium set by financial markets</label><br>
+      <button type="button" onclick="checkAnswer(15, 'A', 'Determined by the slope of the AE function')">Check</button>
+      <div id="result-q15" class="result"></div>
+    </div>
+    
+    <!-- Question 16 -->
+    <div class="question">
+      <p>16. Which of the following remains fixed in the short-run IS-MP model?</p>
+      <input type="radio" name="q16" value="A" id="q16a1">
+      <label for="q16a1">A. Prices and wages</label><br>
+      <input type="radio" name="q16" value="B" id="q16a2">
+      <label for="q16a2">B. Output and income</label><br>
+      <input type="radio" name="q16" value="C" id="q16a3">
+      <label for="q16a3">C. The government’s fiscal deficit</label><br>
+      <input type="radio" name="q16" value="D" id="q16a4">
+      <label for="q16a4">D. International trade balances</label><br>
+      <button type="button" onclick="checkAnswer(16, 'A', 'Prices and wages remain fixed')">Check</button>
+      <div id="result-q16" class="result"></div>
+    </div>
+    
+    <!-- Question 17 -->
+    <div class="question">
+      <p>17. In the IS-MP model, the horizontal axis is often expressed as the:</p>
+      <input type="radio" name="q17" value="A" id="q17a1">
+      <label for="q17a1">A. Nominal GDP gap</label><br>
+      <input type="radio" name="q17" value="B" id="q17a2">
+      <label for="q17a2">B. Output gap (actual output minus potential output, as a percentage of potential output)</label><br>
+      <input type="radio" name="q17" value="C" id="q17a3">
+      <label for="q17a3">C. Interest rate gap</label><br>
+      <input type="radio" name="q17" value="D" id="q17a4">
+      <label for="q17a4">D. Price level gap</label><br>
+      <button type="button" onclick="checkAnswer(17, 'B', 'The output gap is typically used')">Check</button>
+      <div id="result-q17" class="result"></div>
+    </div>
+    
+    <!-- Question 18 -->
+    <div class="question">
+      <p>18. The 45-degree line used in aggregate expenditure (AE) analysis represents:</p>
+      <input type="radio" name="q18" value="A" id="q18a1">
+      <label for="q18a1">A. The set of points where planned spending equals actual output</label><br>
+      <input type="radio" name="q18" value="B" id="q18a2">
+      <label for="q18a2">B. The potential output of the economy</label><br>
+      <input type="radio" name="q18" value="C" id="q18a3">
+      <label for="q18a3">C. The equilibrium in the money market</label><br>
+      <input type="radio" name="q18" value="D" id="q18a4">
+      <label for="q18a4">D. The supply curve for loanable funds</label><br>
+      <button type="button" onclick="checkAnswer(18, 'A', 'Points where planned spending equals actual output')">Check</button>
+      <div id="result-q18" class="result"></div>
+    </div>
+    
+    <!-- Question 19 -->
+    <div class="question">
+      <p>19. According to the IS-MP framework, if expectations become more pessimistic about future economic conditions, the IS curve is likely to:</p>
+      <input type="radio" name="q19" value="A" id="q19a1">
+      <label for="q19a1">A. Shift to the right</label><br>
+      <input type="radio" name="q19" value="B" id="q19a2">
+      <label for="q19a2">B. Shift to the left, leading to a more negative output gap</label><br>
+      <input type="radio" name="q19" value="C" id="q19a3">
+      <label for="q19a3">C. Remain unchanged</label><br>
+      <input type="radio" name="q19" value="D" id="q19a4">
+      <label for="q19a4">D. Cause the MP curve to shift upward</label><br>
+      <button type="button" onclick="checkAnswer(19, 'B', 'It shifts to the left, increasing the negative output gap')">Check</button>
+      <div id="result-q19" class="result"></div>
+    </div>
+    
+    <!-- Question 20 -->
+    <div class="question">
+      <p>20. The key policy implication of the IS-MP model is that:</p>
+      <input type="radio" name="q20" value="A" id="q20a1">
+      <label for="q20a1">A. Fiscal and monetary policies can only affect long-run output</label><br>
+      <input type="radio" name="q20" value="B" id="q20a2">
+      <label for="q20a2">B. Changes in the real interest rate affect short-run aggregate demand and the output gap, allowing policymakers to counteract recessions or overheating</label><br>
+      <input type="radio" name="q20" value="C" id="q20a3">
+      <label for="q20a3">C. Only monetary policy matters, while fiscal policy is irrelevant</label><br>
+      <input type="radio" name="q20" value="D" id="q20a4">
+      <label for="q20a4">D. The central bank’s role is limited to controlling inflation, not output</label><br>
+      <button type="button" onclick="checkAnswer(20, 'B', 'Real interest rate changes affect aggregate demand and the output gap')">Check</button>
+      <div id="result-q20" class="result"></div>
+    </div>
+    
+  </form>
+  
+  <script>
+    function checkAnswer(qNumber, correctAnswer, correctAnswerText) {
+      var answer = document.querySelector('input[name="q' + qNumber + '"]:checked');
+      var resultDiv = document.getElementById('result-q' + qNumber);
+      
+      // Remove previous response classes
+      resultDiv.classList.remove("correct", "incorrect");
+      
+      if (!answer) {
+        resultDiv.innerHTML = "Please select an answer.";
+        return;
+      }
+      
+      if (answer.value === correctAnswer) {
+        resultDiv.innerHTML = "✅ Correct!";
+        resultDiv.classList.add("correct");
+      } else {
+        resultDiv.innerHTML = "❌ Incorrect. The correct answer is " + correctAnswer + ". " + correctAnswerText;
+        resultDiv.classList.add("incorrect");
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 8 - Phillips Curve & Unemployment</title>
+  <style>
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .banner {
+      text-align: center;
+      background-color: #f0f0f0;
+      padding: 10px;
+      border-bottom: 2px solid #ccc;
+      margin-bottom: 20px;
+    }
+    .banner h2 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+    .banner p {
+      margin: 5px 0 0 0;
+      font-size: 0.9em;
+      color: #555;
+    }
+    nav {
+      margin-bottom: 20px;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+    }
+    nav ul li {
+      display: inline;
+      margin-right: 10px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #007BFF;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    h2.section-title {
+      margin-top: 40px;
+      color: #333;
+    }
+    .question {
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    .result {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .correct {
+      color: green;
+    }
+    .incorrect {
+      color: red;
+    }
+    button {
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header class="banner">
+    <h2>ECO 102 Practise Quiz</h2>
+    <p>Teng</p>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="chapter1.html">Chapter 1</a></li>
+      <li><a href="chapter2.html">Chapter 2</a></li>
+      <li><a href="chapter3.html">Chapter 3</a></li>
+      <li><a href="chapter4.html">Chapter 4</a></li>
+      <li><a href="chapter5.html">Chapter 5</a></li>
+      <li><a href="chapter6.html">Chapter 6</a></li>
+      <li><a href="chapter7.html">Chapter 7</a></li>
+      <li><a href="chapter8.html">Chapter 8</a></li>
+      <li><a href="chapter9.html">Chapter 9</a></li>
+      <li><a href="chapter10.html">Chapter 10</a></li>
+      <li><a href="chapter11.html">Chapter 11</a></li>
+      <li><a href="chapter12.html">Chapter 12</a></li>
+    </ul>
+  </nav>
+
+  <h1>Chapter 8 - Phillips Curve & Unemployment</h1>
+  <form id="quizForm">
+    <!-- Section 8a: Phillips Curve -->
+    <h2 class="section-title">8a. Phillips Curve</h2>
+    
+    <!-- Q1 -->
+    <div class="question">
+      <p>1. Which statement best describes the Phillips Curve?</p>
+      <input type="radio" name="q1" value="A" id="q1a1">
+      <label for="q1a1">A. It shows the positive relationship between inflation and unemployment.</label><br>
+      <input type="radio" name="q1" value="B" id="q1a2">
+      <label for="q1a2">B. It depicts a negative relationship between inflation and the unemployment rate, holding other factors constant.</label><br>
+      <input type="radio" name="q1" value="C" id="q1a3">
+      <label for="q1a3">C. It represents the trade-off between real GDP and potential GDP.</label><br>
+      <input type="radio" name="q1" value="D" id="q1a4">
+      <label for="q1a4">D. It illustrates the relationship between government spending and inflation.</label><br>
+      <button type="button" onclick="checkAnswer(1, 'B', 'It depicts a negative relationship between inflation and the unemployment rate, holding other factors constant.')">Check</button>
+      <div id="result-q1" class="result"></div>
+    </div>
+    
+    <!-- Q2 -->
+    <div class="question">
+      <p>2. In the Phillips Curve framework, which variable represents the baseline forecast for next year’s price changes?</p>
+      <input type="radio" name="q2" value="A" id="q2a1">
+      <label for="q2a1">A. Cost-push inflation</label><br>
+      <input type="radio" name="q2" value="B" id="q2a2">
+      <label for="q2a2">B. Expected inflation (πₑ)</label><br>
+      <input type="radio" name="q2" value="C" id="q2a3">
+      <label for="q2a3">C. Demand-pull inflation</label><br>
+      <input type="radio" name="q2" value="D" id="q2a4">
+      <label for="q2a4">D. Output gap</label><br>
+      <button type="button" onclick="checkAnswer(2, 'B', 'Expected inflation (πₑ)')">Check</button>
+      <div id="result-q2" class="result"></div>
+    </div>
+    
+    <!-- Q3 -->
+    <div class="question">
+      <p>3. Demand-pull inflation is most directly related to which of the following?</p>
+      <input type="radio" name="q3" value="A" id="q3a1">
+      <label for="q3a1">A. An increase in production costs</label><br>
+      <input type="radio" name="q3" value="B" id="q3a2">
+      <label for="q3a2">B. An increase in aggregate demand relative to potential output</label><br>
+      <input type="radio" name="q3" value="C" id="q3a3">
+      <label for="q3a3">C. A decline in inflation expectations</label><br>
+      <input type="radio" name="q3" value="D" id="q3a4">
+      <label for="q3a4">D. A decrease in the risk premium</label><br>
+      <button type="button" onclick="checkAnswer(3, 'B', 'An increase in aggregate demand relative to potential output')">Check</button>
+      <div id="result-q3" class="result"></div>
+    </div>
+    
+    <!-- Q4 -->
+    <div class="question">
+      <p>4. Cost-push inflation arises when:</p>
+      <input type="radio" name="q4" value="A" id="q4a1">
+      <label for="q4a1">A. Excess demand pushes up prices above expectations.</label><br>
+      <input type="radio" name="q4" value="B" id="q4a2">
+      <label for="q4a2">B. Unanticipated increases in production costs force firms to raise prices.</label><br>
+      <input type="radio" name="q4" value="C" id="q4a3">
+      <label for="q4a3">C. Inflation expectations are lower than actual inflation.</label><br>
+      <input type="radio" name="q4" value="D" id="q4a4">
+      <label for="q4a4">D. The central bank increases the policy rate.</label><br>
+      <button type="button" onclick="checkAnswer(4, 'B', 'Unanticipated increases in production costs force firms to raise prices.')">Check</button>
+      <div id="result-q4" class="result"></div>
+    </div>
+    
+    <!-- Q5 -->
+    <div class="question">
+      <p>5. Which of the following best describes how inflation expectations influence actual inflation?</p>
+      <input type="radio" name="q5" value="A" id="q5a1">
+      <label for="q5a1">A. Actual inflation always remains below inflation expectations.</label><br>
+      <input type="radio" name="q5" value="B" id="q5a2">
+      <label for="q5a2">B. Firms base their price-setting on expected inflation, so if expectations rise, prices tend to adjust upward accordingly.</label><br>
+      <input type="radio" name="q5" value="C" id="q5a3">
+      <label for="q5a3">C. Inflation expectations do not affect firms’ pricing decisions.</label><br>
+      <input type="radio" name="q5" value="D" id="q5a4">
+      <label for="q5a4">D. Inflation expectations only matter when output is below potential.</label><br>
+      <button type="button" onclick="checkAnswer(5, 'B', 'Firms adjust prices based on inflation expectations')">Check</button>
+      <div id="result-q5" class="result"></div>
+    </div>
+    
+    <!-- Q6 -->
+    <div class="question">
+      <p>6. Adaptive expectations are characterized by:</p>
+      <input type="radio" name="q6" value="A" id="q6a1">
+      <label for="q6a1">A. Fully forward-looking behavior using all available information.</label><br>
+      <input type="radio" name="q6" value="B" id="q6a2">
+      <label for="q6a2">B. Relying solely on historical inflation data to forecast future inflation.</label><br>
+      <input type="radio" name="q6" value="C" id="q6a3">
+      <label for="q6a3">C. Ignoring past inflation trends entirely.</label><br>
+      <input type="radio" name="q6" value="D" id="q6a4">
+      <label for="q6a4">D. Setting expectations based on central bank targets only.</label><br>
+      <button type="button" onclick="checkAnswer(6, 'B', 'Relying solely on historical inflation data to forecast future inflation.')">Check</button>
+      <div id="result-q6" class="result"></div>
+    </div>
+    
+    <!-- Q7 -->
+    <div class="question">
+      <p>7. According to the Phillips Curve, when actual output exceeds potential output (a positive output gap), what is the likely effect on inflation relative to expectations?</p>
+      <input type="radio" name="q7" value="A" id="q7a1">
+      <label for="q7a1">A. Inflation will fall below expected inflation.</label><br>
+      <input type="radio" name="q7" value="B" id="q7a2">
+      <label for="q7a2">B. Inflation will equal expected inflation.</label><br>
+      <input type="radio" name="q7" value="C" id="q7a3">
+      <label for="q7a3">C. Inflation will rise above expected inflation.</label><br>
+      <input type="radio" name="q7" value="D" id="q7a4">
+      <label for="q7a4">D. Inflation will not change.</label><br>
+      <button type="button" onclick="checkAnswer(7, 'C', 'Inflation will rise above expected inflation.')">Check</button>
+      <div id="result-q7" class="result"></div>
+    </div>
+    
+    <!-- Q8 -->
+    <div class="question">
+      <p>8. In the long-run equilibrium of the Phillips Curve, when the output gap is zero, actual inflation equals:</p>
+      <input type="radio" name="q8" value="A" id="q8a1">
+      <label for="q8a1">A. Zero</label><br>
+      <input type="radio" name="q8" value="B" id="q8a2">
+      <label for="q8a2">B. The natural rate of inflation</label><br>
+      <input type="radio" name="q8" value="C" id="q8a3">
+      <label for="q8a3">C. Expected inflation</label><br>
+      <input type="radio" name="q8" value="D" id="q8a4">
+      <label for="q8a4">D. The sum of cost-push and demand-pull inflation</label><br>
+      <button type="button" onclick="checkAnswer(8, 'C', 'Expected inflation')">Check</button>
+      <div id="result-q8" class="result"></div>
+    </div>
+    
+    <!-- Q9 -->
+    <div class="question">
+      <p>9. If firms and households have well-anchored inflation expectations at 2% but the economy experiences a positive output gap, actual inflation is likely to be:</p>
+      <input type="radio" name="q9" value="A" id="q9a1">
+      <label for="q9a1">A. Below 2%</label><br>
+      <input type="radio" name="q9" value="B" id="q9a2">
+      <label for="q9a2">B. Exactly 2%</label><br>
+      <input type="radio" name="q9" value="C" id="q9a3">
+      <label for="q9a3">C. Above 2%</label><br>
+      <input type="radio" name="q9" value="D" id="q9a4">
+      <label for="q9a4">D. Unaffected by the output gap</label><br>
+      <button type="button" onclick="checkAnswer(9, 'C', 'Above 2%')">Check</button>
+      <div id="result-q9" class="result"></div>
+    </div>
+    
+    <!-- Q10 -->
+    <div class="question">
+      <p>10. Sticky prices in the Phillips Curve framework imply that:</p>
+      <input type="radio" name="q10" value="A" id="q10a1">
+      <label for="q10a1">A. Prices adjust instantly to changes in demand.</label><br>
+      <input type="radio" name="q10" value="B" id="q10a2">
+      <label for="q10a2">B. Firms delay adjusting prices immediately to unexpected shocks, creating short-run deviations from expected inflation.</label><br>
+      <input type="radio" name="q10" value="C" id="q10a3">
+      <label for="q10a3">C. Inflation expectations are irrelevant in the short run.</label><br>
+      <input type="radio" name="q10" value="D" id="q10a4">
+      <label for="q10a4">D. The output gap has no effect on inflation.</label><br>
+      <button type="button" onclick="checkAnswer(10, 'B', 'Firms delay price adjustment to shocks.')">Check</button>
+      <div id="result-q10" class="result"></div>
+    </div>
+    
+    <!-- Q11 -->
+    <div class="question">
+      <p>11. A self-fulfilling inflationary expectation occurs when:</p>
+      <input type="radio" name="q11" value="A" id="q11a1">
+      <label for="q11a1">A. Firms ignore future price changes.</label><br>
+      <input type="radio" name="q11" value="B" id="q11a2">
+      <label for="q11a2">B. High inflation expectations lead firms to preemptively raise prices, thereby causing actual inflation to rise.</label><br>
+      <input type="radio" name="q11" value="C" id="q11a3">
+      <label for="q11a3">C. Central banks maintain low policy rates.</label><br>
+      <input type="radio" name="q11" value="D" id="q11a4">
+      <label for="q11a4">D. The output gap remains zero.</label><br>
+      <button type="button" onclick="checkAnswer(11, 'B', 'High inflation expectations lead to preemptive price increases')">Check</button>
+      <div id="result-q11" class="result"></div>
+    </div>
+    
+    <!-- Q12 -->
+    <div class="question">
+      <p>12. A downward shift in inflation expectations (πₑ) will have what effect on the Phillips Curve?</p>
+      <input type="radio" name="q12" value="A" id="q12a1">
+      <label for="q12a1">A. It shifts the entire curve upward.</label><br>
+      <input type="radio" name="q12" value="B" id="q12a2">
+      <label for="q12a2">B. It shifts the entire curve downward, lowering inflation at every level of the output gap.</label><br>
+      <input type="radio" name="q12" value="C" id="q12a3">
+      <label for="q12a3">C. It makes the curve steeper.</label><br>
+      <input type="radio" name="q12" value="D" id="q12a4">
+      <label for="q12a4">D. It causes a movement along the curve without shifting it.</label><br>
+      <button type="button" onclick="checkAnswer(12, 'B', 'It shifts the entire curve downward')">Check</button>
+      <div id="result-q12" class="result"></div>
+    </div>
+    
+    <!-- Q13 -->
+    <div class="question">
+      <p>13. Which of the following is most likely to cause the Phillips Curve to shift upward?</p>
+      <input type="radio" name="q13" value="A" id="q13a1">
+      <label for="q13a1">A. A decrease in energy prices</label><br>
+      <input type="radio" name="q13" value="B" id="q13a2">
+      <label for="q13a2">B. An unexpected increase in raw material costs (a cost-push shock)</label><br>
+      <input type="radio" name="q13" value="C" id="q13a3">
+      <label for="q13a3">C. Improved productivity across industries</label><br>
+      <input type="radio" name="q13" value="D" id="q13a4">
+      <label for="q13a4">D. A reduction in aggregate demand</label><br>
+      <button type="button" onclick="checkAnswer(13, 'B', 'An unexpected increase in raw material costs')">Check</button>
+      <div id="result-q13" class="result"></div>
+    </div>
+    
+    <!-- Q14 -->
+    <div class="question">
+      <p>14. A self-fulfilling inflationary expectation occurs when high inflation expectations lead firms to preemptively raise prices. Which outcome does this scenario describe?</p>
+      <input type="radio" name="q14" value="A" id="q14a1">
+      <label for="q14a1">A. Inflation remains stable.</label><br>
+      <input type="radio" name="q14" value="B" id="q14a2">
+      <label for="q14a2">B. Actual inflation rises above expected inflation.</label><br>
+      <input type="radio" name="q14" value="C" id="q14a3">
+      <label for="q14a3">C. Actual inflation falls below expected inflation.</label><br>
+      <input type="radio" name="q14" value="D" id="q14a4">
+      <label for="q14a4">D. There is no change in inflation.</label><br>
+      <button type="button" onclick="checkAnswer(14, 'B', 'Actual inflation rises above expected inflation')">Check</button>
+      <div id="result-q14" class="result"></div>
+    </div>
+    
+    <!-- Q15 -->
+    <div class="question">
+      <p>15. Which of the following is most likely to cause the Phillips Curve to shift upward?</p>
+      <input type="radio" name="q15" value="A" id="q15a1">
+      <label for="q15a1">A. A decrease in energy prices</label><br>
+      <input type="radio" name="q15" value="B" id="q15a2">
+      <label for="q15a2">B. An unexpected increase in raw material costs (a cost-push shock)</label><br>
+      <input type="radio" name="q15" value="C" id="q15a3">
+      <label for="q15a3">C. Improved productivity across industries</label><br>
+      <input type="radio" name="q15" value="D" id="q15a4">
+      <label for="q15a4">D. A reduction in aggregate demand</label><br>
+      <button type="button" onclick="checkAnswer(15, 'B', 'An unexpected increase in raw material costs')">Check</button>
+      <div id="result-q15" class="result"></div>
+    </div>
+    
+    <!-- Section 8B: Unemployment and PC-->
+    <h2 class="section-title">8B. Unemployment and PC</h2>
+    
+    <!-- Q16 -->
+    <div class="question">
+      <p>16. The unemployment rate is defined as:</p>
+      <input type="radio" name="q16" value="A" id="q16a1">
+      <label for="q16a1">A. The percentage of the working-age population that is unemployed.</label><br>
+      <input type="radio" name="q16" value="B" id="q16a2">
+      <label for="q16a2">B. The percentage of the labour force that is unemployed.</label><br>
+      <input type="radio" name="q16" value="C" id="q16a3">
+      <label for="q16a3">C. The percentage of employed individuals out of the total population.</label><br>
+      <input type="radio" name="q16" value="D" id="q16a4">
+      <label for="q16a4">D. The percentage of job vacancies relative to total employment.</label><br>
+      <button type="button" onclick="checkAnswer(16, 'B', 'The percentage of the labour force that is unemployed.')">Check</button>
+      <div id="result-q16" class="result"></div>
+    </div>
+    
+    <!-- Q17 -->
+    <div class="question">
+      <p>17. The employment rate measures:</p>
+      <input type="radio" name="q17" value="A" id="q17a1">
+      <label for="q17a1">A. The proportion of the working-age population that is either employed or actively looking for work.</label><br>
+      <input type="radio" name="q17" value="B" id="q17a2">
+      <label for="q17a2">B. The proportion of the total population that is employed.</label><br>
+      <input type="radio" name="q17" value="C" id="q17a3">
+      <label for="q17a3">C. The proportion of the working-age population that is employed.</label><br>
+      <input type="radio" name="q17" value="D" id="q17a4">
+      <label for="q17a4">D. The ratio of unemployed to employed individuals.</label><br>
+      <button type="button" onclick="checkAnswer(17, 'C', 'The proportion of the working-age population that is employed.')">Check</button>
+      <div id="result-q17" class="result"></div>
+    </div>
+    
+    <!-- Q18 -->
+    <div class="question">
+      <p>18. Which of the following individuals is NOT considered part of the labour force?</p>
+      <input type="radio" name="q18" value="A" id="q18a1">
+      <label for="q18a1">A. A retired person</label><br>
+      <input type="radio" name="q18" value="B" id="q18a2">
+      <label for="q18a2">B. A person actively seeking a job</label><br>
+      <input type="radio" name="q18" value="C" id="q18a3">
+      <label for="q18a3">C. A self-employed worker</label><br>
+      <input type="radio" name="q18" value="D" id="q18a4">
+      <label for="q18a4">D. A person temporarily absent from work due to illness</label><br>
+      <button type="button" onclick="checkAnswer(18, 'A', 'A retired person is not considered part of the labour force.')">Check</button>
+      <div id="result-q18" class="result"></div>
+    </div>
+    
+    <!-- Q19 -->
+    <div class="question">
+      <p>19. The labour force participation rate is calculated as:</p>
+      <input type="radio" name="q19" value="A" id="q19a1">
+      <label for="q19a1">A. (Employed ÷ Working-age population) × 100</label><br>
+      <input type="radio" name="q19" value="B" id="q19a2">
+      <label for="q19a2">B. (Labour force ÷ Working-age population) × 100</label><br>
+      <input type="radio" name="q19" value="C" id="q19a3">
+      <label for="q19a3">C. (Unemployed ÷ Labour force) × 100</label><br>
+      <input type="radio" name="q19" value="D" id="q19a4">
+      <label for="q19a4">D. (Employed ÷ Total population) × 100</label><br>
+      <button type="button" onclick="checkAnswer(19, 'B', '(Labour force ÷ Working-age population) × 100')">Check</button>
+      <div id="result-q19" class="result"></div>
+    </div>
+    
+    <!-- Q20 -->
+    <div class="question">
+      <p>20. How is the unemployment rate calculated?</p>
+      <input type="radio" name="q20" value="A" id="q20a1">
+      <label for="q20a1">A. (Unemployed ÷ Working-age population) × 100</label><br>
+      <input type="radio" name="q20" value="B" id="q20a2">
+      <label for="q20a2">B. (Unemployed ÷ Labour force) × 100</label><br>
+      <input type="radio" name="q20" value="C" id="q20a3">
+      <label for="q20a3">C. (Employed ÷ Labour force) × 100</label><br>
+      <input type="radio" name="q20" value="D" id="q20a4">
+      <label for="q20a4">D. (Unemployed ÷ Total population) × 100</label><br>
+      <button type="button" onclick="checkAnswer(20, 'B', '(Unemployed ÷ Labour force) × 100')">Check</button>
+      <div id="result-q20" class="result"></div>
+    </div>
+    
+    <!-- Q21 -->
+    <div class="question">
+      <p>21. Frictional unemployment is primarily due to:</p>
+      <input type="radio" name="q21" value="A" id="q21a1">
+      <label for="q21a1">A. Long-term structural changes in the economy</label><br>
+      <input type="radio" name="q21" value="B" id="q21a2">
+      <label for="q21a2">B. Temporary transitions as workers search for new jobs</label><br>
+      <input type="radio" name="q21" value="C" id="q21a3">
+      <label for="q21a3">C. Economic downturns causing reduced demand for labor</label><br>
+      <input type="radio" name="q21" value="D" id="q21a4">
+      <label for="q21a4">D. Mismatches between skills and job requirements due to technological changes</label><br>
+      <button type="button" onclick="checkAnswer(21, 'B', 'Temporary transitions as workers search for new jobs')">Check</button>
+      <div id="result-q21" class="result"></div>
+    </div>
+    
+    <!-- Q22 -->
+    <div class="question">
+      <p>22. Cyclical unemployment is associated with:</p>
+      <input type="radio" name="q22" value="A" id="q22a1">
+      <label for="q22a1">A. Temporary mismatches in the labour market</label><br>
+      <input type="radio" name="q22" value="B" id="q22a2">
+      <label for="q22a2">B. Structural changes in the economy</label><br>
+      <input type="radio" name="q22" value="C" id="q22a3">
+      <label for="q22a3">C. Fluctuations in the business cycle, with higher unemployment during recessions</label><br>
+      <input type="radio" name="q22" value="D" id="q22a4">
+      <label for="q22a4">D. Seasonal variations in employment</label><br>
+      <button type="button" onclick="checkAnswer(22, 'C', 'Higher unemployment during recessions')">Check</button>
+      <div id="result-q22" class="result"></div>
+    </div>
+    
+    <!-- Q23 -->
+    <div class="question">
+      <p>23. Okun’s Law relates the output gap to changes in unemployment. According to this law, if actual output is below potential output, the unemployment rate will be:</p>
+      <input type="radio" name="q23" value="A" id="q23a1">
+      <label for="q23a1">A. Lower than the natural rate</label><br>
+      <input type="radio" name="q23" value="B" id="q23a2">
+      <label for="q23a2">B. Equal to the natural rate</label><br>
+      <input type="radio" name="q23" value="C" id="q23a3">
+      <label for="q23a3">C. Higher than the natural rate</label><br>
+      <input type="radio" name="q23" value="D" id="q23a4">
+      <label for="q23a4">D. Unaffected by the output gap</label><br>
+      <button type="button" onclick="checkAnswer(23, 'C', 'Higher than the natural rate')">Check</button>
+      <div id="result-q23" class="result"></div>
+    </div>
+    
+    <!-- Q24 -->
+    <div class="question">
+      <p>24. If the natural rate of unemployment is 5% and cyclical unemployment adds 1 percentage point, the overall unemployment rate becomes:</p>
+      <input type="radio" name="q24" value="A" id="q24a1">
+      <label for="q24a1">A. 4%</label><br>
+      <input type="radio" name="q24" value="B" id="q24a2">
+      <label for="q24a2">B. 5%</label><br>
+      <input type="radio" name="q24" value="C" id="q24a3">
+      <label for="q24a3">C. 6%</label><br>
+      <input type="radio" name="q24" value="D" id="q24a4">
+      <label for="q24a4">D. 7%</label><br>
+      <button type="button" onclick="checkAnswer(24, 'C', 'Overall unemployment rate becomes 6%')">Check</button>
+      <div id="result-q24" class="result"></div>
+    </div>
+    
+    <!-- Q25 -->
+    <div class="question">
+      <p>25. The labour market Phillips Curve illustrates a relationship between:</p>
+      <input type="radio" name="q25" value="A" id="q25a1">
+      <label for="q25a1">A. The inflation rate and the level of potential output</label><br>
+      <input type="radio" name="q25" value="B" id="q25a2">
+      <label for="q25a2">B. The unemployment rate and the inflation rate</label><br>
+      <input type="radio" name="q25" value="C" id="q25a3">
+      <label for="q25a3">C. The unemployment rate and real GDP</label><br>
+      <input type="radio" name="q25" value="D" id="q25a4">
+      <label for="q25a4">D. The employment rate and wages</label><br>
+      <button type="button" onclick="checkAnswer(25, 'B', 'It illustrates the relationship between the unemployment rate and the inflation rate')">Check</button>
+      <div id="result-q25" class="result"></div>
+    </div>
+    
+    <!-- Q26 -->
+    <div class="question">
+      <p>26. According to the Phillips Curve, when actual unemployment falls below the natural rate, we would expect:</p>
+      <input type="radio" name="q26" value="A" id="q26a1">
+      <label for="q26a1">A. Inflation to be below expected inflation</label><br>
+      <input type="radio" name="q26" value="B" id="q26a2">
+      <label for="q26a2">B. Inflation to be exactly equal to expected inflation</label><br>
+      <input type="radio" name="q26" value="C" id="q26a3">
+      <label for="q26a3">C. Inflation to exceed expected inflation</label><br>
+      <input type="radio" name="q26" value="D" id="q26a4">
+      <label for="q26a4">D. No change in inflation relative to expectations</label><br>
+      <button type="button" onclick="checkAnswer(26, 'C', 'Inflation will exceed expected inflation')">Check</button>
+      <div id="result-q26" class="result"></div>
+    </div>
+    
+    <!-- Q27 -->
+    <div class="question">
+      <p>27. Hidden unemployment refers to:</p>
+      <input type="radio" name="q27" value="A" id="q27a1">
+      <label for="q27a1">A. The portion of the working-age population that is employed part-time.</label><br>
+      <input type="radio" name="q27" value="B" id="q27a2">
+      <label for="q27a2">B. Individuals who are unemployed but not counted in the unemployment rate because they have stopped looking for work.</label><br>
+      <input type="radio" name="q27" value="C" id="q27a3">
+      <label for="q27a3">C. Unemployment that is caused by structural changes in the economy.</label><br>
+      <input type="radio" name="q27" value="D" id="q27a4">
+      <label for="q27a4">D. Temporary unemployment during seasonal shifts.</label><br>
+      <button type="button" onclick="checkAnswer(27, 'B', 'Individuals not counted because they have stopped looking for work')">Check</button>
+      <div id="result-q27" class="result"></div>
+    </div>
+    
+    <!-- Q28 -->
+    <div class="question">
+      <p>28. Structural unemployment arises when:</p>
+      <input type="radio" name="q28" value="A" id="q28a1">
+      <label for="q28a1">A. Workers are between jobs during normal transitions.</label><br>
+      <input type="radio" name="q28" value="B" id="q28a2">
+      <label for="q28a2">B. Economic downturns reduce overall demand for labor.</label><br>
+      <input type="radio" name="q28" value="C" id="q28a3">
+      <label for="q28a3">C. There is a mismatch between the skills of the labour force and the needs of employers.</label><br>
+      <input type="radio" name="q28" value="D" id="q28a4">
+      <label for="q28a4">D. Seasonal changes in industries cause temporary layoffs.</label><br>
+      <button type="button" onclick="checkAnswer(28, 'C', 'Mismatch between skills and job requirements')">Check</button>
+      <div id="result-q28" class="result"></div>
+    </div>
+    
+    <!-- Q29 -->
+    <div class="question">
+      <p>29. Supply shocks, such as a sudden increase in oil prices, can affect the Phillips Curve by:</p>
+      <input type="radio" name="q29" value="A" id="q29a1">
+      <label for="q29a1">A. Shifting it downward due to lower inflation expectations</label><br>
+      <input type="radio" name="q29" value="B" id="q29a2">
+      <label for="q29a2">B. Shifting it upward due to increased production costs, leading to higher inflation for any given unemployment level</label><br>
+      <input type="radio" name="q29" value="C" id="q29a3">
+      <label for="q29a3">C. Causing a movement along the Phillips Curve without shifting it</label><br>
+      <input type="radio" name="q29" value="D" id="q29a4">
+      <label for="q29a4">D. Reducing the natural rate of unemployment</label><br>
+      <button type="button" onclick="checkAnswer(29, 'B', 'Shifts upward due to increased production costs')">Check</button>
+      <div id="result-q29" class="result"></div>
+    </div>
+    
+    <!-- Q30 -->
+    <div class="question">
+      <p>30. During periods of disinflation, a common short-run cost observed is:</p>
+      <input type="radio" name="q30" value="A" id="q30a1">
+      <label for="q30a1">A. Lower unemployment without any output loss</label><br>
+      <input type="radio" name="q30" value="B" id="q30a2">
+      <label for="q30a2">B. A temporary rise in unemployment as the economy adjusts to lower inflation expectations</label><br>
+      <input type="radio" name="q30" value="C" id="q30a3">
+      <label for="q30a3">C. A permanent increase in the natural rate of unemployment</label><br>
+      <input type="radio" name="q30" value="D" id="q30a4">
+      <label for="q30a4">D. A decrease in productivity with no change in unemployment</label><br>
+      <button type="button" onclick="checkAnswer(30, 'B', 'A temporary rise in unemployment')">Check</button>
+      <div id="result-q30" class="result"></div>
+    </div>
+    
+  </form>
+  
+  <script>
+    function checkAnswer(qNumber, correctAnswer, correctAnswerText) {
+      var answer = document.querySelector('input[name="q' + qNumber + '"]:checked');
+      var resultDiv = document.getElementById('result-q' + qNumber);
+      
+      // Remove previous classes
+      resultDiv.classList.remove("correct", "incorrect");
+      
+      if (!answer) {
+        resultDiv.innerHTML = "Please select an answer.";
+        return;
+      }
+      
+      if (answer.value === correctAnswer) {
+        resultDiv.innerHTML = "✅ Correct!";
+        resultDiv.classList.add("correct");
+      } else {
+        resultDiv.innerHTML = "❌ Incorrect. The correct answer is " + correctAnswer + ". " + correctAnswerText;
+        resultDiv.classList.add("incorrect");
+      }
+    }
+  </script>
+</body>
+</html>
